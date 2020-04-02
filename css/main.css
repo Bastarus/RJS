@@ -1,0 +1,204 @@
+@font-face {
+    font-family: 'Oswald';
+    src: local('Oswald ExtraLight'), local('Oswald-ExtraLight'), url('../fonts/Oswaldextralight.woff2') format('woff2'), url('../fonts/Oswaldextralight.woff') format('woff'), url('../fonts/Oswaldextralight.ttf') format('truetype');
+    font-weight: 200;
+    font-style: normal;
+}
+@font-face {
+    font-family: 'Oswald';
+    src: local('Oswald Bold'), local('Oswald-Bold'), url('../fonts/Oswaldbold.woff2') format('woff2'), url('../fonts/Oswaldbold.woff') format('woff'), url('../fonts/Oswaldbold.ttf') format('truetype');
+    font-weight: 700;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Roboto';
+    src: local('Roboto'), local('Roboto-Regular'), url('../fonts/Roboto.woff2') format('woff2'), url('../fonts/Roboto.woff') format('woff'), url('../fonts/Roboto.ttf') format('truetype');
+    font-weight: 400;
+    font-style: normal;
+}
+@font-face {
+    font-family: 'Roboto';
+    src: local('Roboto Italic'), local('Roboto-Italic'), url('../fonts/Robotoitalic.woff2') format('woff2'), url('../fonts/Robotoitalic.woff') format('woff'), url('../fonts/Robotoitalic.ttf') format('truetype');
+    font-weight: 400;
+    font-style: italic;
+}
+@font-face {
+    font-family: 'Roboto';
+    src: local('Roboto Bold'), local('Roboto-Bold'), url('../fonts/Robotobold.woff2') format('woff2'), url('../fonts/Robotobold.woff') format('woff'), url('../fonts/Robotobold.ttf') format('truetype');
+    font-weight: 700;
+    font-style: normal;
+}
+
+html {
+    font-size: 14px;
+}
+body {
+    color: #ffffff;
+    font-family: 'Roboto', sans-serif;
+}
+
+.btn {
+    background-color: #F4DD15;
+    border-radius: 5px;
+    box-shadow: 0px 5px 2px rgba(0, 0, 0, 0.25);
+    color: #000000;
+    font-size: 18px;
+    font-weight: bold;
+    padding: 8px 15px;
+}
+.desktop {
+    display: none;
+}
+
+.yellow {
+    color: #F4DD15;
+}
+
+.header {
+    background-image: url('../img/bg/bg_mobile.png');
+    background-size: cover;
+    display: grid;
+    grid-template-rows: auto 1fr;
+    min-height: 100vh;
+}
+.header-top {
+    align-items: center;
+    background-color: #131211;
+    display: flex;
+    justify-content: space-between;
+    min-height: 50px;
+    padding: 10px 15px;
+}
+
+.header-top__logo {
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+    font-family: 'Oswald', serif;
+    font-weight: lighter;
+}
+.header-top__logo>p {
+    font-size: 18px;
+    font-weight: bold;
+}
+.header-top__logo>.line {
+    background-color: #F4DD15;
+    height: 2px;
+    margin: 3px 0;
+    width: 80%;
+}
+.header-top__logo_down {
+    align-items: center;
+    display: flex;
+    justify-content: space-between;
+}
+.circle {
+    background-color: #F4DD15;
+    border-radius: 50%;
+    height: 7px;
+    width: 7px;
+}
+.circle_left {
+    margin-right: 5px;
+}
+.circle_right {
+    margin-left: 5px;
+}
+
+.header-top__button>div {
+    background-color: #F4DD15;
+    height: 5px;
+    width: 30px;
+}
+.header-top__button>div:nth-child(2) {
+    margin: 5px 0;
+}
+.header-top__menu {
+    display: none;
+}
+
+.header-main {
+    display: flex;
+}
+.header-main__info {
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    margin: 0 6px;
+}
+.header-main__title {
+    font-size: 2.3rem;
+    font-weight: bold;
+}
+.header-main__text {
+    font-size: 16px;
+    line-height: 16px;
+    margin: 2vh 0 5vh;
+}
+.header-main__title, .header-main__text {
+    text-align: center;
+}
+
+.section {
+    background-image: url('../img/bg/bg_mobile.png');
+    background-size: cover;
+    padding: 30px 20px;
+    position: relative;
+}
+.section_bg-lines {
+    background: linear-gradient(180deg, #6B707A 0%, rgba(109, 111, 121, 0.499139) 35.99%, rgba(108, 110, 125, 0.49035) 65.98%, #131211 100%), url('../img/bg/section-line__bg_mobile.png');
+    background-size: cover;
+}
+.section_withBB {
+    padding: 0;
+}
+
+.section__subtitle {
+    font-size: 18px;
+    font-weight: bold;
+}
+.section__title {
+    font-size: 24px;
+    font-weight: bold;
+}
+.section__title-block>.section__text {
+    color: #F4DD15;
+    font-size: 18px;
+    font-style: italic;
+    margin-top: 5px;
+}
+.section__text {
+    line-height: 18px;
+    margin: 30px 0;
+}
+.section__text>p {
+    margin-bottom: 10px;
+}
+
+.black-block {
+    background-color: #131211;
+    padding: 30px 20px;
+}
+
+.disciplines {
+    position: relative;
+}
+.disciplines__cards {
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: 1fr;
+}
+.disciplines__card {
+    background: rgba(196, 196, 196, 0.2);
+    border-radius: 30px;
+    display: none;
+    min-height: 225px;
+}
+.disciplines__card:first-child {
+    display: block;
+}
+.disciplines__card_back {
+    display: none;
+}
