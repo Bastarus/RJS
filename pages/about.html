@@ -4,12 +4,27 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Обо мне</title>
+    <link rel="stylesheet" href="../css/reset.css">
+    <link rel="stylesheet" href="../css/main.css">
 </head>
 <body>
     <header class="header">
         <div class="header-top">
-            <div class="header-top__logo">
-                <img src="" alt="Логотип">
+            <a class="logo" href="">
+                <p>
+                    Рогачева <span class="yellow">Ж.</span> С.
+                </p>
+                <div class="line"></div>
+                <div class="logo_down">
+                    <div class="circle circle_left"></div>
+                    <p>Преподаватель</p>
+                    <div class="circle circle_right"></div>
+                </div>
+            </a>
+            <div class="header-top__button mobile">
+                <div></div>
+                <div></div>
+                <div></div>
             </div>
             <nav class="header-top__menu">
                 <ul>
@@ -27,19 +42,19 @@
                     </li>
                     <li>
                         <div class="user-menu">
-                            <div class="user-menu__img">
+                            <div class="user-menu__img desktop">
                                 <a href="">
                                     <img src="img/icons/user-icon.svg" alt="Иконка пользователя">
                                 </a>
                             </div>
-                            <div class="user-menu__block">
-                                <p>
+                            <ul class="user-menu__block">
+                                <li>
                                     <a href="">Вход</a>
-                                </p>
-                                <p>
+                                </li>
+                                <li>
                                     <a href="">Регистрация</a>
-                                </p>
-                            </div>
+                                </li>
+                            </ul>
                         </div>
                     </li>
                 </ul>
@@ -71,35 +86,40 @@
                             Преподаватель
                         </p>
                     </div>
-                    <p class="section__text">
-                        Voluptate proident ex velit ut duis tempor occaecat sit voluptate incididunt 
-                        ullamco dolor. Excepteur nostrud eu cupidatat cillum nisi nisi do duis laborum 
-                        labore veniam deserunt deserunt dolor. 
-                    </p>
-                    <p class="section__text">
-                        Duis ullamco nisi incididunt sunt consectetur elit tempor proident sunt. 
-                        Deserunt fugiat occaecat ea ipsum consequat. Enim enim tempor cillum ea nisi est 
-                        tempor adipisicing ut minim elit et ullamco velit. Minim duis ex amet aliqua aute 
-                        ea velit veniam cupidatat. 
-                    </p>
-                    <p class="section__text">
-                        Voluptate proident ex velit ut duis tempor occaecat sit voluptate incididunt 
-                        ullamco dolor. Excepteur nostrud eu cupidatat cillum nisi nisi do duis laborum 
-                        labore veniam deserunt deserunt dolor.  
-                    </p>
-                    <p class="section__text">
-                        Duis ullamco nisi incididunt sunt consectetur elit tempor proident sunt. 
-                        Deserunt fugiat occaecat ea ipsum consequat. Enim enim tempor cillum ea nisi est 
-                        tempor adipisicing ut minim elit et ullamco velit. Minim duis ex amet aliqua aute 
-                        ea velit veniam cupidatat. 
-                    </p>
+                    <div class="section__img mobile">
+                        <img src="../img/Rectangle 30.png" alt="Мое фото">
+                    </div>
+                    <div class="section__text">
+                        <p>
+                            Voluptate proident ex velit ut duis tempor occaecat sit voluptate incididunt 
+                            ullamco dolor. Excepteur nostrud eu cupidatat cillum nisi nisi do duis laborum 
+                            labore veniam deserunt deserunt dolor. 
+                        </p>
+                        <p>
+                            Duis ullamco nisi incididunt sunt consectetur elit tempor proident sunt. 
+                            Deserunt fugiat occaecat ea ipsum consequat. Enim enim tempor cillum ea nisi est 
+                            tempor adipisicing ut minim elit et ullamco velit. Minim duis ex amet aliqua aute 
+                            ea velit veniam cupidatat. 
+                        </p>
+                        <p>
+                            Voluptate proident ex velit ut duis tempor occaecat sit voluptate incididunt 
+                            ullamco dolor. Excepteur nostrud eu cupidatat cillum nisi nisi do duis laborum 
+                            labore veniam deserunt deserunt dolor.  
+                        </p>
+                        <p>
+                            Duis ullamco nisi incididunt sunt consectetur elit tempor proident sunt. 
+                            Deserunt fugiat occaecat ea ipsum consequat. Enim enim tempor cillum ea nisi est 
+                            tempor adipisicing ut minim elit et ullamco velit. Minim duis ex amet aliqua aute 
+                            ea velit veniam cupidatat. 
+                        </p>
+                    </div>
                     <div class="soc">
-                        <div><img src="../img/icons/soc/facebook-logo.svg" alt="Facebook"></div>
-                        <div><img src="../img/icons/soc/vk-logo.svg" alt="VK"></div>
-                        <div><img src="../img/icons/soc/whatsapp-logo.svg" alt="WhatsApp"></div>
+                        <div><a href=""><img src="../img/icons/soc/facebook-logo.svg" alt="Facebook"></a></div>
+                        <div><a href=""><img src="../img/icons/soc/vk-logo.svg" alt="VK"></a></div>
+                        <div><a href=""><img src="../img/icons/soc/whatsapp-logo.svg" alt="WhatsApp"></a></div>
                     </div>
                 </div>
-                <div class="section__img">
+                <div class="section__img desktop">
                     <img src="../img/Rectangle 30.png" alt="Мое фото">
                 </div>
             </div>
@@ -107,9 +127,9 @@
         <section class="section">
             <div class="section__main">
                 <div class="progress">
-                    <div class="progress-card">
+                    <div class="progress-card black-block">
                         <div class="progress__img">
-                            <img src="../img/icons/about/about-card1__img.svg" alt="Преподаватель">
+                            <img src="../img/icons/about/about-card1__img.png" alt="Преподаватель">
                         </div>
                         <h3 class="progress__title">
                             12
@@ -118,9 +138,9 @@
                             Преподаваемых дисциплин
                         </p>
                     </div>
-                    <div class="progress-card">
+                    <div class="progress-card black-block">
                         <div class="progress__img">
-                            <img src="../img/icons/about/about-card2__img.svg" alt="Студент">
+                            <img src="../img/icons/about/about-card2__img.png" alt="Студент">
                         </div>
                         <h3 class="progress__title">
                             2000+
@@ -129,9 +149,9 @@
                             Выпущенных студентов
                         </p>
                     </div>
-                    <div class="progress-card">
+                    <div class="progress-card black-block">
                         <div class="progress__img">
-                            <img src="../img/icons/about/about-card3__img.svg" alt="Научная работа">
+                            <img src="../img/icons/about/about-card3__img.png" alt="Научная работа">
                         </div>
                         <h3 class="progress__title">
                             12
@@ -164,7 +184,7 @@
                     </p>
                 </div>
                 <div class="section__img">
-                    <img src="../img/" alt="Диплом">
+                    <img src="../img/Sertifikat-obrazets-1024x639.jpg" alt="Сертификат">
                 </div>
             </div>
         </section>

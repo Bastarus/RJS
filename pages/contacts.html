@@ -4,12 +4,27 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Контакты</title>
+    <link rel="stylesheet" href="../css/reset.css">
+    <link rel="stylesheet" href="../css/main.css">
 </head>
 <body>
     <header class="header">
         <div class="header-top">
-            <div class="header-top__logo">
-                <img src="" alt="Логотип">
+            <a class="logo" href="">
+                <p>
+                    Рогачева <span class="yellow">Ж.</span> С.
+                </p>
+                <div class="line"></div>
+                <div class="logo_down">
+                    <div class="circle circle_left"></div>
+                    <p>Преподаватель</p>
+                    <div class="circle circle_right"></div>
+                </div>
+            </a>
+            <div class="header-top__button mobile">
+                <div></div>
+                <div></div>
+                <div></div>
             </div>
             <nav class="header-top__menu">
                 <ul>
@@ -27,19 +42,19 @@
                     </li>
                     <li>
                         <div class="user-menu">
-                            <div class="user-menu__img">
+                            <div class="user-menu__img desktop">
                                 <a href="">
                                     <img src="img/icons/user-icon.svg" alt="Иконка пользователя">
                                 </a>
                             </div>
-                            <div class="user-menu__block">
-                                <p>
+                            <ul class="user-menu__block">
+                                <li>
                                     <a href="">Вход</a>
-                                </p>
-                                <p>
+                                </li>
+                                <li>
                                     <a href="">Регистрация</a>
-                                </p>
-                            </div>
+                                </li>
+                            </ul>
                         </div>
                     </li>
                 </ul>
@@ -60,7 +75,7 @@
         </div>
     </header>
     <main>
-        <section class="section">
+        <section class="section section_contacts">
             <div class="section__main">
                 <div class="contacts">
                     <div class="tel">
@@ -68,7 +83,7 @@
                             <img src="../img/icons/phone-icon.png" alt="Иконка телефона">
                         </div>
                         <h2 class="section__title">
-                            +79281111111
+                            <a href="tel: +79281111111">+79281111111</a>
                         </h2>
                     </div>
                     <div class="mail">
@@ -99,7 +114,7 @@
                 </div>
             </div>
             <div class="map">
-
+                <script type="text/javascript" charset="utf-8" async src="https://api-maps.yandex.ru/services/constructor/1.0/js/?um=constructor%3A063f2dcfd6da8652b25010ab0607893678e12a4b8dc153ce6616f1595ef38a56&amp;width=100%25&amp;height=400&amp;lang=ru_RU&amp;scroll=true"></script>
             </div>
         </section>
     </main>
