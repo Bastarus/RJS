@@ -1,15 +1,7 @@
 <footer class="footer">
     <nav class="footer__menu">
         <a class="logo" href="/">
-            <p>
-                Рогачева <span class="yellow">Ж.</span> С.
-            </p>
-            <div class="line"></div>
-            <div class="logo_down">
-                <div class="circle circle_left"></div>
-                <p>Преподаватель</p>
-                <div class="circle circle_right"></div>
-            </div>
+            <img src="/img/icons/Logo.png" alt="Логотип">
         </a>
         <ul class="footer__list">
             <li class="footer__item footer__item_bold">
