@@ -1,67 +1,16 @@
 <!DOCTYPE html>
 <html lang="ru">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Главная</title>
-    <link rel="stylesheet" href="css/reset.css">
-    <link rel="stylesheet" href="css/main.css">
-    <link rel="icon" href="favicon.ico" type="image/x-icon">
-    <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
+    <?php
+        $title = 'Главная';
+        require_once 'templates/head.php';
+    ?>
 </head>
 <body>
     <header class="header header_big">
-        <div class="header-top">
-            <a class="logo" href="">
-                <p>
-                    Рогачева <span class="yellow">Ж.</span> С.
-                </p>
-                <div class="line"></div>
-                <div class="logo_down">
-                    <div class="circle circle_left"></div>
-                    <p>Преподаватель</p>
-                    <div class="circle circle_right"></div>
-                </div>
-            </a>
-            <div class="header-top__button mobile">
-                <div></div>
-                <div></div>
-                <div></div>
-            </div>
-            <nav class="header-top__menu">
-                <ul>
-                    <li>
-                        <a href="">Главная</a>
-                    </li>
-                    <li>
-                        <a href="">Обо мне</a>
-                    </li>
-                    <li>
-                        <a href="">Новости</a>
-                    </li>
-                    <li>
-                        <a href="">Контакты</a>
-                    </li>
-                    <li>
-                        <div class="user-menu">
-                            <div class="user-menu__img desktop">
-                                <a href="">
-                                    <img src="img/icons/user-icon.svg" alt="Иконка пользователя">
-                                </a>
-                            </div>
-                            <ul class="user-menu__block">
-                                <li>
-                                    <a href="">Вход</a>
-                                </li>
-                                <li>
-                                    <a href="">Регистрация</a>
-                                </li>
-                            </ul>
-                        </div>
-                    </li>
-                </ul>
-            </nav>
-        </div>
+        <?php
+            require_once 'E:/Projects/RJS/templates/header-top.php';
+        ?>
         <div class="header-main">
             <div class="header-main__info">
                 <h1 class="header-main__title">
@@ -357,97 +306,8 @@
             </div>
         </section>
     </main>
-    <footer class="footer">
-        <nav class="footer__menu">
-            <div class="logo">
-                <p>
-                    Рогачева <span class="yellow">Ж.</span> С.
-                </p>
-                <div class="line"></div>
-                <div class="logo_down">
-                    <div class="circle circle_left"></div>
-                    <p>Преподаватель</p>
-                    <div class="circle circle_right"></div>
-                </div>
-            </div>
-            <ul class="footer__list">
-                <li class="footer__item footer__item_bold">
-                        Меню
-                </li>
-                <li class="footer__item">
-                    <a href="">
-                        Главная
-                    </a>
-                </li>
-                <li class="footer__item">
-                    <a href="">
-                        Обо мне
-                    </a>
-                </li>
-                <li class="footer__item">
-                    <a href="">
-                        Новости
-                    </a>
-                </li>
-                <li class="footer__item">
-                    <a href="">
-                        Контакты
-                    </a>
-                </li>
-            </ul>
-            <ul class="footer__list">
-                <li class="footer__item footer__item_bold">
-                        Файлы
-                </li>
-                <li class="footer__item">
-                    <a href="">
-                        Экономика отрасли
-                    </a>
-                </li>
-                <li class="footer__item">
-                    <a href="">
-                        Деньги.Кредит.Банки
-                    </a>
-                </li>
-                <li class="footer__item">
-                    <a href="">
-                        Логистика
-                    </a>
-                </li>
-                <li class="footer__item">
-                    <a href="">
-                        Правоведение
-                    </a>
-                </li>
-            </ul>
-            <ul class="footer__list">
-                <li class="footer__item footer__item_bold">
-                    <a href="">
-                        
-                    </a>
-                </li>
-                <li class="footer__item">
-                    <a href="">
-                        Рынок ценных бумаг
-                    </a>
-                </li>
-                <li class="footer__item">
-                    <a href="">
-                        Теория отраслевых рынков
-                    </a>
-                </li>
-                <li class="footer__item">
-                    <a href="">
-                        Экономика недвижимости
-                    </a>
-                </li>
-                <li class="footer__item">
-                    <a href="">
-                        Производственная практика
-                    </a>
-                </li>
-            </ul>
-        </nav>
-    </footer>
+    <?php
+        require_once 'E:\Projects\RJS\templates/footer.php';
+    ?>
 </body>
 </html>

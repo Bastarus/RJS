@@ -84,39 +84,7 @@ body {
 }
 
 .logo {
-    align-items: center;
-    cursor: pointer;
-    display: flex;
-    flex-direction: column;
-    font-family: 'Oswald', serif;
-    font-weight: lighter;
-}
-.logo>p {
-    font-size: 18px;
-    font-weight: bold;
-}
-.logo>.line {
-    background-color: #F4DD15;
-    height: 2px;
-    margin: 3px 0;
-    width: 80%;
-}
-.logo_down {
-    align-items: center;
-    display: flex;
-    justify-content: space-between;
-}
-.circle {
-    background-color: #F4DD15;
-    border-radius: 50%;
-    height: 7px;
-    width: 7px;
-}
-.circle_left {
-    margin-right: 5px;
-}
-.circle_right {
-    margin-left: 5px;
+    max-width: 35%;
 }
 
 .header-top__button {
@@ -130,6 +98,16 @@ body {
 .header-top__button>div:nth-child(2) {
     margin: 5px 0;
 }
+.header-top__button_active>.htb_t {
+    transform: translateY(0%) rotateZ(45deg);
+}
+.header-top__button_active>.htb_m {
+    display: none;
+}
+.header-top__button_active>.htb_b {
+    transform: translateY(-100%) rotateZ(-45deg);
+}
+
 .header-top__menu {
     background-color: #131211;
     left: 0;
@@ -145,6 +123,7 @@ body {
     display: block;
     top: 100%;
     transform: translateY(0);
+    z-index: 2;
 }
 .header-top__menu ul li {
     font-size: 18px;
@@ -163,7 +142,7 @@ body {
     display: flex;
     flex-direction: column;
     justify-content: center;
-    margin: 0 6px;
+    padding: 0 6px;
     width: 100%;
 }
 .header-main__info>.btn {
@@ -287,10 +266,10 @@ body {
     top: 50%;
 }
 .disciplines__arrow_prev {
-    left: -5%;
+    left: 0;
 }
 .disciplines__arrow_next {
-    right: -5%;
+    right: 0;
 }
 
 .news {
@@ -304,11 +283,13 @@ body {
 }
 .news__item {
     align-items: center;
-    background: linear-gradient(0deg, rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url('../img/bg/Rectangle\ 20.png');
+    background: linear-gradient(0deg, rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url('../img/bg/john-sommo-autumn2.jpg');
+    background-position: center;
     background-size: cover;
     display: flex;
     flex-direction: column;
     justify-content: center;
+    min-height: 200px;
     padding: 30px 20px;
     text-align: center;
 }
@@ -384,4 +365,82 @@ body {
     color: #F4DD15;
     font-size: 24px;
     font-weight: bold;
+}
+
+@media (min-width: 576px) and (max-width: 767px) {
+    .logo {
+        max-width: 20%;
+    }
+    .header-main__info {
+        padding: 0 70px;
+    }
+    .section {
+        padding: 30px 50px;
+    }
+    .section_withBB {
+        padding: 0;
+    }
+    .black-block {
+        padding: 30px 50px;
+    }
+
+    .disciplines__arrows>a {
+        margin-top: -31px;
+        max-width: 60px;
+    }
+}
+
+@media (min-width: 768px) and (max-width: 991px) {
+    .header_big {
+        min-height: 50vh;
+    }
+    .logo {
+        max-width: 15%;
+    }
+    .header-top__button {
+        display: none;
+    }
+    .header-top__menu {
+        padding: 0;
+        position: static;
+        transform: none;
+        width: 70%;
+    }
+    .header-top__menu>ul {
+        align-items: center;
+        display: flex;
+        justify-content: space-between;
+    }
+    .header-top__menu ul li {
+        margin-bottom: 0;
+    }
+    .user-menu__img {
+        display: block;
+        max-width: 50px;
+    }
+    .user-menu__block {
+        display: none;
+    }
+    .header-main__info {
+        padding: 0 90px;
+    }
+    .header-main__title {
+        font-size: 3rem;
+    }
+    .header-main__text {
+        font-size: 24px;
+        line-height: 24px;
+    }
+    .btn {
+        font-size: 24px;
+        font-weight: normal;
+    }
+}
+
+@media (min-width: 992px) and (max-width: 1199px) {
+    
+}
+
+@media (min-width: 1200px) {
+    
 }

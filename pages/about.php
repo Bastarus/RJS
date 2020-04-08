@@ -1,65 +1,16 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Обо мне</title>
-    <link rel="stylesheet" href="../css/reset.css">
-    <link rel="stylesheet" href="../css/main.css">
+    <?php
+        $title = 'Обо мне';
+        require_once 'E:/Projects/RJS/templates/head.php';
+    ?>
 </head>
 <body>
     <header class="header">
-        <div class="header-top">
-            <a class="logo" href="">
-                <p>
-                    Рогачева <span class="yellow">Ж.</span> С.
-                </p>
-                <div class="line"></div>
-                <div class="logo_down">
-                    <div class="circle circle_left"></div>
-                    <p>Преподаватель</p>
-                    <div class="circle circle_right"></div>
-                </div>
-            </a>
-            <div class="header-top__button mobile">
-                <div></div>
-                <div></div>
-                <div></div>
-            </div>
-            <nav class="header-top__menu">
-                <ul>
-                    <li>
-                        <a href="">Главная</a>
-                    </li>
-                    <li>
-                        <a href="">Обо мне</a>
-                    </li>
-                    <li>
-                        <a href="">Новости</a>
-                    </li>
-                    <li>
-                        <a href="">Контакты</a>
-                    </li>
-                    <li>
-                        <div class="user-menu">
-                            <div class="user-menu__img desktop">
-                                <a href="">
-                                    <img src="img/icons/user-icon.svg" alt="Иконка пользователя">
-                                </a>
-                            </div>
-                            <ul class="user-menu__block">
-                                <li>
-                                    <a href="">Вход</a>
-                                </li>
-                                <li>
-                                    <a href="">Регистрация</a>
-                                </li>
-                            </ul>
-                        </div>
-                    </li>
-                </ul>
-            </nav>
-        </div>
+        <?php
+            require_once 'E:/Projects/RJS/templates/header-top.php';
+        ?>
         <div class="header-main">
             <div class="header-main__info">
                 <h1 class="header-main__title">
@@ -189,5 +140,8 @@
             </div>
         </section>
     </main>
+    <?php
+        require_once 'E:\Projects\RJS\/templates/footer.php';
+    ?>
 </body>
 </html>
