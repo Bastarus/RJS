@@ -43,7 +43,7 @@ body {
     border-radius: 5px;
     box-shadow: 0px 5px 2px rgba(0, 0, 0, 0.25);
     color: #000000;
-    font-size: 18px;
+    font-size: 1.29rem;
     font-weight: bold;
     padding: 8px 15px;
 }
@@ -126,7 +126,7 @@ body {
     z-index: 2;
 }
 .header-top__menu ul li {
-    font-size: 18px;
+    font-size: 1.29rem;
     font-weight: bold;
     margin-bottom: 10px;
 }
@@ -153,7 +153,7 @@ body {
     font-weight: bold;
 }
 .header-main__text {
-    font-size: 16px;
+    font-size: 1.14rem;
     line-height: 16px;
     margin: 2vh 0 0;
 }
@@ -181,6 +181,9 @@ body {
     border: 3px solid #F4DD15;
     border-radius: 20px;
 }
+.section__img {
+    text-align: center;
+}
 
 .section__main {
     flex-direction: column;
@@ -188,14 +191,14 @@ body {
 }
 
 .section__subtitle {
-    font-size: 18px;
+    font-size: 1.29rem;
     font-weight: bold;
 }
 .section__title-block {
     margin-bottom: 30px;
 }
 .section__title {
-    font-size: 24px;
+    font-size: 1.7rem;
     font-weight: bold;
 }
 .section__title_black {
@@ -203,7 +206,7 @@ body {
 }
 .section__title-block>.section__text {
     color: #F4DD15;
-    font-size: 18px;
+    font-size: 1.29rem;
     font-style: italic;
     margin-top: 5px;
 }
@@ -224,10 +227,8 @@ body {
     position: relative;
 }
 .disciplines__cards {
-    display: grid;
-    grid-template-columns: 1fr;
-    grid-template-rows: 1fr;
-    justify-items: center;
+    display: flex;
+    justify-content: space-around;
     position: relative;
 }
 .disciplines__card {
@@ -254,14 +255,14 @@ body {
     text-align: center;
 }
 .disciplines__title {
-    font-size: 24px;
+    font-size: 1.7rem;
     font-weight: bold;
     text-align: center;
 }
 .disciplines__arrows>a {
     display: block;
     margin-top: -15px;
-    max-height: 30px;
+    max-width: 30px;
     position: absolute;
     top: 50%;
 }
@@ -283,7 +284,7 @@ body {
 }
 .news__item {
     align-items: center;
-    background: linear-gradient(0deg, rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url('../img/bg/john-sommo-autumn2.jpg');
+    background: linear-gradient(0deg, rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('../img/bg/john-sommo-autumn2.jpg');
     background-position: center;
     background-size: cover;
     display: flex;
@@ -304,55 +305,55 @@ body {
     width: 70%;
 }
 .news__title {
-    font-size: 24px;
+    font-size: 1.7rem;
     font-weight: bold;
     margin-bottom: 10px;
 }
 
+.progress {
+    display: grid;
+    grid-gap: 10px;
+    grid-template-columns: 1fr;
+}
 .progress-card {
-    margin-bottom: 30px;
     text-align: center;
 }
 .progress__title {
-    font-size: 48px;
+    font-size: 3.43rem;
     font-weight: bold;
     margin: 30px 0;
 }
 .progress__text {
-    font-size: 18px;
+    font-size: 1.29rem;
     font-weight: bold;
 }
 
 .section_contacts {
-    background: linear-gradient(180deg, #656B79 0%, #131211 100%);
-    padding: 0 0 30px;
-}
-.section_contacts>.black-block p {
-    margin-bottom: 0;
+    padding: 0;
 }
 .contacts {
-    padding: 30px;
+    padding: 30px 20px;
 }
-.mail {
-    margin: 30px 0;
+.contacts>.section__text {
+    margin: 0;
 }
-.tel, .mail {
-    align-items: center;
-    display: flex;
-    justify-content: space-around;
-}
-.contacts__img {
-    max-width: 50px;
+.contact__title {
+    font-size: 1.29rem;
+    font-weight: bold;
+    margin-bottom: 5px;
 }
 
 .footer {
     background-color: #131211;
+    border-top: 3px solid #F4DD15;
     padding: 30px;
 }
+.footer__menu>.logo {
+    display: none;
+}
 .footer__menu {
-    align-items: center;
-    display: flex;
-    flex-direction: column;
+    display: grid;
+    grid-template-columns: 1fr;
     text-align: center;
 }
 .footer__list {
@@ -363,13 +364,20 @@ body {
 }
 .footer__item_bold {
     color: #F4DD15;
-    font-size: 24px;
+    font-size: 1.7rem;
     font-weight: bold;
 }
 
-@media (min-width: 576px) and (max-width: 767px) {
+@media (min-width: 576px) {
+    html {
+        font-size: 18px;
+    }
+
     .logo {
         max-width: 20%;
+    }
+    .header-main {
+        padding: 30px 0;
     }
     .header-main__info {
         padding: 0 70px;
@@ -384,13 +392,39 @@ body {
         padding: 30px 50px;
     }
 
+    .disciplines__card {
+        width: 45%;
+    }
+    .disciplines__card:nth-child(2) {
+        display: block;
+    }
+    .disciplines__title {
+        font-size: 1rem;
+    }
     .disciplines__arrows>a {
-        margin-top: -31px;
-        max-width: 60px;
+        margin-top: -22px;
+        max-width: 40px;
+    }
+
+    .progress {
+        grid-template-columns: 1fr 1fr;
+    }
+    .progress-card {
+        padding: 30px 20px;
+    }
+    .progress__title {
+        font-size: 2.5rem;
+    }
+
+    .footer__menu {
+        grid-template-columns: 1fr 1fr;
+    }
+    .footer__menu>.footer__list:last-child {
+        grid-column: 2 / 3;
     }
 }
 
-@media (min-width: 768px) and (max-width: 991px) {
+@media (min-width: 768px) {
     .header_big {
         min-height: 50vh;
     }
@@ -409,10 +443,12 @@ body {
     .header-top__menu>ul {
         align-items: center;
         display: flex;
-        justify-content: space-between;
+        justify-content: flex-end;
     }
     .header-top__menu ul li {
+        font-size: 1rem;
         margin-bottom: 0;
+        margin-left: 20px;
     }
     .user-menu__img {
         display: block;
@@ -424,21 +460,66 @@ body {
     .header-main__info {
         padding: 0 90px;
     }
-    .header-main__title {
-        font-size: 3rem;
-    }
     .header-main__text {
-        font-size: 24px;
         line-height: 24px;
     }
     .btn {
-        font-size: 24px;
         font-weight: normal;
+    }
+    .section_contacts {
+        display: flex;
+        padding: 0;
     }
 }
 
 @media (min-width: 992px) and (max-width: 1199px) {
-    
+    .desktop {
+        display: block;
+    }
+    .mobile {
+        display: none;
+    }
+    .header-main {
+        align-items: center;
+        justify-content: center;
+        padding: 0 80px;
+    }
+    .header_big>.header-main {
+        padding: 0 40px;
+    }
+    .header-main__info {
+        justify-content: flex-start;
+        padding: 0;
+        width: 50%;
+    }
+    .header-main__img {
+        display: block;
+        max-width: 300px;
+    }
+
+    .section {
+        
+    }
+
+    .disciplines__card {
+        width: 30%;
+    }
+    div.disciplines__card:nth-child(3) {
+        display: block;
+    }
+
+    .news {
+        grid-auto-columns: 1fr 1fr;
+        grid-template-columns: 1fr 1fr;
+    }
+
+    .footer__menu {
+        align-items: flex-end;
+        grid-template-columns: 1fr 1fr 1fr;
+    }
+    .footer__menu > .footer__list:last-child {
+        grid-column: auto;
+    }
 }
 
 @media (min-width: 1200px) {

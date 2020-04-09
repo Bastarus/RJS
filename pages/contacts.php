@@ -26,42 +26,29 @@
         </div>
     </header>
     <main>
-        <section class="section section_contacts">
+        <section class="section section_contacts section_black">
             <div class="section__main">
-                <div class="contacts">
-                    <div class="tel">
-                        <div class="contacts__img">
-                            <img src="../img/icons/phone-icon.png" alt="Иконка телефона">
-                        </div>
-                        <h2 class="section__title">
+                <div class="section__info contacts">
+                    <div class="section__text">
+                        <h2 class="contact__title">
+                            <span class="yellow">Телефон</span>
+                        </h2>
+                        <p>
                             <a href="tel: +79281111111">+79281111111</a>
+                        </p>
+                        <h2 class="contact__title">
+                            <span class="yellow">Почта</span>
                         </h2>
-                    </div>
-                    <div class="mail">
-                        <div class="contacts__img">
-                            <img src="../img/icons/mail-icon.png" alt="Иконка почты">
-                        </div>
-                        <h2 class="section__title">
+                        <p>
                             fakemail@mail.ru
+                        </p>
+                        <h2 class="contact__title">
+                            <span class="yellow">Режим работы</span>
                         </h2>
+                        <p>
+                            8:00-17:00
+                        </p>
                     </div>
-                    <div class="soc">
-                        <div><img src="../img/icons/soc/facebook-logo.svg" alt="Facebook"></div>
-                        <div><img src="../img/icons/soc/vk-logo.svg" alt="VK"></div>
-                        <div><img src="../img/icons/soc/whatsapp-logo.svg" alt="WhatsApp"></div>
-                    </div>
-                </div>
-            </div>
-            <div class="black-block">
-                <div class="section__info">
-                    <div class="section__title-block">
-                        <h2 class="section__title">
-                            Адрес
-                        </h2>
-                    </div>
-                    <p class="section__text">
-                        г. Волгодонск, ул. Ленина, 73 каб. 205, второй этаж
-                    </p>
                 </div>
             </div>
             <div class="map">

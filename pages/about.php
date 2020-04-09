@@ -37,7 +37,7 @@
                             Преподаватель
                         </p>
                     </div>
-                    <div class="section__img mobile">
+                    <div class="section__img">
                         <img src="../img/Rectangle 30.png" alt="Мое фото">
                     </div>
                     <div class="section__text">

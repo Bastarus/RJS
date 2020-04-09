@@ -61,7 +61,7 @@
                                 Minim duis ex amet aliqua aute ea velit veniam cupidatat.
                             </p>
                         </div>
-                        <a href="" class="btn">
+                        <a href="pages/about.php" class="btn">
                             Подробнее
                         </a>
                     </div>
@@ -240,16 +240,10 @@
                     </div>
                     <div class="disciplines__arrows">
                         <a href="" class="disciplines__arrow disciplines__arrow_prev">
-                            <picture>
-                                <source media="(max-width: 650px)" srcset="img/icons/disp/arrows/disciplines__arrow_prev-mob.svg">
-                                <img src="img/icons/disp/arrows/disciplines__arrow_prev.svg" alt="Предыдущие">
-                            </picture>
+                            <img src="img/icons/disp/arrows/disciplines__arrow_prev.svg" alt="Предыдущие">
                         </a>
                         <a href="" class="disciplines__arrow disciplines__arrow_next">
-                            <picture>
-                                <source media="(max-width: 650px)" srcset="img/icons/disp/arrows/disciplines__arrow_next-mob.svg">
-                                    <img src="img/icons/disp/arrows/disciplines__arrow_next.svg" alt="Следующие">
-                            </picture>
+                            <img src="img/icons/disp/arrows/disciplines__arrow_next.svg" alt="Следующие">
                         </a>
                     </div>
                 </div>
