@@ -27,7 +27,7 @@
     </header>
     <main>
         <section class="section section_black">
-            <div class="section__main">
+            <div class="section__main section__main_row">
                 <div class="section__info">
                     <div class="section__title-block">
                         <h2 class="section__title">
@@ -37,7 +37,7 @@
                             Преподаватель
                         </p>
                     </div>
-                    <div class="section__img">
+                    <div class="section__img mobile">
                         <img src="../img/Rectangle 30.png" alt="Мое фото">
                     </div>
                     <div class="section__text">

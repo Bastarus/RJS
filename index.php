@@ -32,7 +32,7 @@
     </header>
     <main>
         <section class="section section_bg-lines section_withBB">
-            <div class="section__main">
+            <div class="section__main section__main_row">
                 <div class="section__img desktop">
                     <img src="img/section1__img.png" alt="Фото">
                 </div>

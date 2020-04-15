@@ -18,7 +18,7 @@
                 </a>
             </li>
             <li class="footer__item">
-                <a href="">
+                <a href="/pages/news/news.php">
                     Новости
                 </a>
             </li>

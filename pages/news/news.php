@@ -1,50 +1,16 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="ru">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Новости</title>
+    <?php
+        $title = 'Новости';
+        require_once '../../templates/head.php';
+    ?>
 </head>
 <body>
     <header class="header">
-        <div class="header-top">
-            <div class="header-top__logo">
-                <img src="" alt="Логотип">
-            </div>
-            <nav class="header-top__menu">
-                <ul>
-                    <li>
-                        <a href="">Главная</a>
-                    </li>
-                    <li>
-                        <a href="">Обо мне</a>
-                    </li>
-                    <li>
-                        <a href="">Новости</a>
-                    </li>
-                    <li>
-                        <a href="">Контакты</a>
-                    </li>
-                    <li>
-                        <div class="user-menu">
-                            <div class="user-menu__img">
-                                <a href="">
-                                    <img src="img/icons/user-icon.svg" alt="Иконка пользователя">
-                                </a>
-                            </div>
-                            <div class="user-menu__block">
-                                <p>
-                                    <a href="">Вход</a>
-                                </p>
-                                <p>
-                                    <a href="">Регистрация</a>
-                                </p>
-                            </div>
-                        </div>
-                    </li>
-                </ul>
-            </nav>
-        </div>
+        <?php
+            require_once 'E:/Projects/RJS/templates/header-top.php';
+        ?>
         <div class="header-main">
             <div class="header-main__info">
                 <h1 class="header-main__title">
@@ -147,5 +113,8 @@
             </div>
         </section>
     </main>
+    <?php
+        require_once 'E:\Projects\RJS\templates/footer.php';
+    ?>
 </body>
 </html>

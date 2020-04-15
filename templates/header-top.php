@@ -16,7 +16,7 @@
                 <a href="/pages/about.php">Обо мне</a>
             </li>
             <li>
-                <a href="">Новости</a>
+                <a href="/pages/news/news.php">Новости</a>
             </li>
             <li>
                 <a href="/pages/contacts.php">Контакты</a>
@@ -25,7 +25,7 @@
                 <div class="user-menu">
                     <div class="user-menu__img desktop">
                         <a href="">
-                            <img src="/img/icons/user-icon.svg" alt="Иконка пользователя">
+                            <img src="/img/icons/user-icon.png" alt="Иконка пользователя">
                         </a>
                     </div>
                     <ul class="user-menu__block">
