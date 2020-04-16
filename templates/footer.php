@@ -3,7 +3,7 @@
         <a class="logo" href="/">
             <img src="/img/icons/Logo.png" alt="Логотип">
         </a>
-        <ul class="footer__list">
+        <ul class="footer__list footer__list_left">
             <li class="footer__item footer__item_bold">
                     Меню
             </li>
@@ -53,7 +53,7 @@
                 </a>
             </li>
         </ul>
-        <ul class="footer__list">
+        <ul class="footer__list footer__list_right">
             <li class="footer__item footer__item_bold">
                 <a href="">
                     

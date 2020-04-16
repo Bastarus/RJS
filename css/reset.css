@@ -48,5 +48,6 @@ a {
 	cursor: pointer;
 }
 img {
+	margin-bottom: -3px;
 	max-width: 100%;
 }

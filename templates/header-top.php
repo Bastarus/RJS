@@ -21,21 +21,12 @@
             <li>
                 <a href="/pages/contacts.php">Контакты</a>
             </li>
-            <li>
-                <div class="user-menu">
-                    <div class="user-menu__img desktop">
-                        <a href="">
-                            <img src="/img/icons/user-icon.png" alt="Иконка пользователя">
-                        </a>
-                    </div>
-                    <ul class="user-menu__block">
-                        <li>
-                            <a href="">Вход</a>
-                        </li>
-                        <li>
-                            <a href="">Регистрация</a>
-                        </li>
-                    </ul>
+            <li class="user-menu__btn">
+                <div class="user-menu__btn_desktop">
+                    <img src="/img/icons/user-icon.png" alt="Иконка пользователя">
+                </div>
+                <div class="user-menu__btn_mobile">
+                    <a href="">Вход/Регистрация</a>
                 </div>
             </li>
         </ul>

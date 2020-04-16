@@ -71,14 +71,14 @@
                     </div>
                 </div>
                 <div class="section__img desktop">
-                    <img src="../img/Rectangle 30.png" alt="Мое фото">
+                    <a href="../img/Rectangle 30.png"><img src="../img/Rectangle 30.png" alt="Мое фото"></a>
                 </div>
             </div>
         </section>
         <section class="section">
             <div class="section__main">
                 <div class="progress">
-                    <div class="progress-card black-block">
+                    <div class="progress-card">
                         <div class="progress__img">
                             <img src="../img/icons/about/about-card1__img.png" alt="Преподаватель">
                         </div>
@@ -89,7 +89,7 @@
                             Преподаваемых дисциплин
                         </p>
                     </div>
-                    <div class="progress-card black-block">
+                    <div class="progress-card">
                         <div class="progress__img">
                             <img src="../img/icons/about/about-card2__img.png" alt="Студент">
                         </div>
@@ -100,7 +100,7 @@
                             Выпущенных студентов
                         </p>
                     </div>
-                    <div class="progress-card black-block">
+                    <div class="progress-card">
                         <div class="progress__img">
                             <img src="../img/icons/about/about-card3__img.png" alt="Научная работа">
                         </div>
@@ -135,7 +135,7 @@
                     </p>
                 </div>
                 <div class="section__img">
-                    <img src="../img/Sertifikat-obrazets-1024x639.jpg" alt="Сертификат">
+                    <a href="../img/Sertifikat-obrazets-1024x639.jpg"><img src="../img/Sertifikat-obrazets-1024x639.jpg" alt="Сертификат"></a>
                 </div>
             </div>
         </section>
