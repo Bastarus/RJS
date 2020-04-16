@@ -295,7 +295,7 @@
                     </div>
                 </div>
                 <div class="btn__wrapper">
-                    <a href="" class="btn">Смотреть все новости</a>
+                    <a href="pages/news/news.php" class="btn">Смотреть все новости</a>
                 </div>
             </div>
         </section>
