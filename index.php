@@ -238,14 +238,6 @@
                             </div>
                         </div>
                     </div>
-                    <div class="disciplines__arrows">
-                        <a href="" class="disciplines__arrow disciplines__arrow_prev">
-                            <img src="img/icons/disp/arrows/disciplines__arrow_prev.svg" alt="Предыдущие">
-                        </a>
-                        <a href="" class="disciplines__arrow disciplines__arrow_next">
-                            <img src="img/icons/disp/arrows/disciplines__arrow_next.svg" alt="Следующие">
-                        </a>
-                    </div>
                 </div>
             </div>
         </section>
