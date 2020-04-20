@@ -4,13 +4,14 @@
     $username = "root";
     $password = "";
 
+    $id = $_GET['id'];
+
     $mysqli = new mysqli($servername, $username, $password, $database);
 
     $title = $_POST["title"];
     $text = $_POST["text"];
-    $date = date("d.m.y");
 
-    $sql = "INSERT INTO `news`(`title`, `text`, `date`) VALUES ('$title', '$text', '$date')";
+    $sql = "UPDATE `news` SET `title`= '$title',`text`= '$text' WHERE `id` = $id";
 
     $mysqli->query($sql);
 

@@ -286,6 +286,10 @@ body {
     font-weight: bold;
     margin-bottom: 10px;
 }
+.newsItem__text {
+    font-size: 2rem;
+    line-height: 2rem;
+}
 .news__buttons {
     align-items: center;
     display: flex;
@@ -296,25 +300,44 @@ body {
     margin-bottom: 10px;
 }
 .form-wrapper {
-    display: flex;
+    border: 1px solid #F4DD15;
+    bottom: 30px;
+    display: none;
     justify-content: center;
+    left: 50%;
+    margin-left: -147px;
+    position: absolute;
+    transition: 0.5s;
+}
+.form-wrapper_active {
+    display: flex;
 }
 .news-form {
     background: #131211;
     display: flex;
     flex-direction: column;
     padding: 30px;
-    width: 50%;
 }
-.news-form>input {
-    border: none;
+.news-form>input, .news-form>textarea {
+    background: none;
+    border: 1px solid #ffffff;
+    color: #ffffff;
     margin-bottom: 15px;
 }
 .news-form>#image {
     margin-top: 15px;
 }
-input:not([type="file"]), textarea {
+input, textarea {
     padding: 10px;
+}
+.news-btn_close {
+    border-radius: 50%;
+    margin-right: -15px;
+    margin-top: -15px;
+    max-width: 30px;
+    position: absolute;
+    right: 0;
+    top: 0;
 }
 
 .progress {
@@ -508,7 +531,6 @@ input:not([type="file"]), textarea {
     .header-main__info {
         align-items: flex-start;
         padding: 0;
-        width: 50%;
     }
     .header-main__title, .header-main__text {
         text-align: left;
@@ -595,6 +617,10 @@ input:not([type="file"]), textarea {
     }
     .disciplines__cards {
         grid-template-columns: 1fr 1fr 1fr;
+    }
+    .newsItem__text {
+        font-size: 1.4rem;
+        line-height: 2rem;
     }
 }
 

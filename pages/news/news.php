@@ -40,7 +40,7 @@
                     $result = $mysqli->query("SELECT * FROM `news` WHERE 1");
 
                     while ($row = $result->fetch_assoc()) {
-                        echo '<div class="news__item">
+                        echo '<a href="newsItem.php?id='. $row['id'] .'"><div class="news__item">
                                 <p class="news__date section__text">
                                     '. $row['date'] .'
                                 </p>
@@ -49,102 +49,31 @@
                                     '. $row['title'] .'
                                 </h3>
                                 <p class="news__text_">
-                                    '. $row['text'] .'
+                                    '. mb_strimwidth($row['text'], 0, 100) . '...' . '
                                 </p>
-                            </div>';
+                            </div></a>';
                     }
                 ?>
-                    <div class="news__item">
-                        <p class="news__date section__text">
-                            28.02.2020
-                        </p>
-                        <div class="news__line"></div>
-                        <h3 class="news__title section__subtitle">
-                            Заголовок новости
-                        </h3>
-                        <p class="news__text_">
-                            Sunt deserunt reprehenderit aliqua pariatur voluptate ullamco nisi duis.
-                        </p>
-                    </div>
-                    <div class="news__item">
-                        <p class="news__date section__text">
-                            28.02.2020
-                        </p>
-                        <div class="news__line"></div>
-                        <h3 class="news__title section__subtitle">
-                            Заголовок новости
-                        </h3>
-                        <p class="news__text_">
-                            Sunt deserunt reprehenderit aliqua pariatur voluptate ullamco nisi duis.
-                        </p>
-                    </div>
-                    <div class="news__item">
-                        <p class="news__date section__text">
-                            28.02.2020
-                        </p>
-                        <div class="news__line"></div>
-                        <h3 class="news__title section__subtitle">
-                            Заголовок новости
-                        </h3>
-                        <p class="news__text_">
-                            Sunt deserunt reprehenderit aliqua pariatur voluptate ullamco nisi duis.
-                        </p>
-                    </div>
-                    <div class="news__item">
-                        <p class="news__date section__text">
-                            28.02.2020
-                        </p>
-                        <div class="news__line"></div>
-                        <h3 class="news__title section__subtitle">
-                            Заголовок новости
-                        </h3>
-                        <p class="news__text_">
-                            Sunt deserunt reprehenderit aliqua pariatur voluptate ullamco nisi duis.
-                        </p>
-                    </div>
-                    <div class="news__item">
-                        <p class="news__date section__text">
-                            28.02.2020
-                        </p>
-                        <div class="news__line"></div>
-                        <h3 class="news__title section__subtitle">
-                            Заголовок новости
-                        </h3>
-                        <p class="news__text_">
-                            Sunt deserunt reprehenderit aliqua pariatur voluptate ullamco nisi duis.
-                        </p>
-                    </div>
-                    <div class="news__item">
-                        <p class="news__date section__text">
-                            28.02.2020
-                        </p>
-                        <div class="news__line"></div>
-                        <h3 class="news__title section__subtitle">
-                            Заголовок новости
-                        </h3>
-                        <p class="news__text_">
-                            Sunt deserunt reprehenderit aliqua pariatur voluptate ullamco nisi duis.
-                        </p>
-                    </div>
                 </div>
                 <div class="news__buttons">
-                    <a href="addNews.php" class="btn">
+                    <div class="btn" id="news-btn">
                         Добавить новость
-                    </a>
+                    </div>
                     <a href="" class="btn">
                         Загрузить следующие
                     </a>
                 </div>
-                <div class="form-wrapper">
+                <div class="form-wrapper" id="form-wrapper">
                     <form name="form1" method="post" action="addNews.php" class="news-form">
                         <label for="title">Заголовок</label>
                         <input type="text" name="title" id="title">
                         <label for="text">Текст новости</label>
-                        <textarea name="text" id="text" cols="30" rows="10"></textarea>
-                        <input type="file" id="image" name="image">
-                        <input name="hiddenField" type="hidden" value="add_n">
+                        <textarea name="text" id="text" cols="10" rows="1"></textarea>
                         <input name="add" type="submit" id="add" value="Добавить">
                     </form>
+                    <div class="news-btn_close" id="news-btn_close">
+                        <img src="../../img/icons/close.png" alt="Закрыть форму">
+                    </div>
                 </div>
             </div>
         </section>
