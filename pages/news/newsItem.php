@@ -19,7 +19,13 @@
     ?>
 </head>
 <body>
-    <header class="header">
+    <style>
+        .header {
+            background: linear-gradient(0deg, rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url("news-files/<?php echo $row['file'] ?>");
+            background-size: cover;
+        }
+    </style>
+    <header class="header header_big">
         <?php
             require_once 'E:/Projects/RJS/templates/header-top.php';
         ?>
@@ -50,28 +56,21 @@
                     <div class="btn" id="news-btn">
                         Редактировать
                     </div>
-                    <a href="" class="btn">
-                        Загрузить фото
+                    <a class="btn" id="removeNews" href="removeNews.php">
+                        Удалить новость
                     </a>
                 </div>
                 <div class="form-wrapper" id="form-wrapper">
-                    <form name="form1" method="post" action="editNews.php" class="news-form">
+                    <form name="editNews" method="post" action="editNews.php" class="news-form">
                         <label for="title">Заголовок</label>
-                        <input type="text" name="title" id="title">
+                        <input type="text" name="editTitle" id="title">
                         <label for="text">Текст новости</label>
-                        <textarea name="text" id="text" cols="10" rows="1"></textarea>
-                        <input name="add" type="submit" id="add" value="Обновить">
+                        <textarea name="text" id="editText" cols="10" rows="1"></textarea>
+                        <input name="edit" type="submit" id="add" value="Обновить">
                     </form>
                     <div class="news-btn_close" id="news-btn_close">
                         <img src="../../img/icons/close.png" alt="Закрыть форму">
                     </div>
-                </div>
-                <div class="form-wrapper" id="form-wrapper">
-                    <form enctype="multipart/form-data" action="__URL__" method="POST">
-                        <input type="hidden" name="MAX_FILE_SIZE" value="10000">
-                        Отправить этот файл: <input name="userfile" type="file">
-                        <input type="submit" value="Отправить файл" />
-                    </form>
                 </div>
             </div>
         </section>

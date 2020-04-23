@@ -260,7 +260,7 @@ body {
 }
 .news__item {
     align-items: center;
-    background: linear-gradient(0deg, rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('../img/bg/john-sommo-autumn2.jpg');
+    background-color: rgba(0, 0, 0, 0.5);
     background-position: center;
     background-size: cover;
     box-shadow: 2px 2px 5px #131211;

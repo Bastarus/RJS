@@ -249,42 +249,33 @@
                     </h2>
                 </div>
                 <div class="news">
-                    <div class="news__item">
-                        <p class="news__date section__text">
-                            28.02.2020
-                        </p>
-                        <div class="news__line"></div>
-                        <h3 class="news__title">
-                            Заголовок новости
-                        </h3>
-                        <p class="news__text_">
-                            Sunt deserunt reprehenderit aliqua pariatur voluptate ullamco nisi duis.
-                        </p>
-                    </div>
-                    <div class="news__item">
-                        <p class="news__date section__text">
-                            28.02.2020
-                        </p>
-                        <div class="news__line"></div>
-                        <h3 class="news__title">
-                            Заголовок новости
-                        </h3>
-                        <p class="news__text_">
-                            Sunt deserunt reprehenderit aliqua pariatur voluptate ullamco nisi duis.
-                        </p>
-                    </div>
-                    <div class="news__item">
-                        <p class="news__date section__text">
-                            28.02.2020
-                        </p>
-                        <div class="news__line"></div>
-                        <h3 class="news__title">
-                            Заголовок новости
-                        </h3>
-                        <p class="news__text_">
-                            Sunt deserunt reprehenderit aliqua pariatur voluptate ullamco nisi duis.
-                        </p>
-                    </div>
+                <?php
+                    $servername = "localhost";
+                    $database = "rjs";
+                    $username = "root";
+                    $password = "";
+
+                    $mysqli = new mysqli($servername, $username, $password, $database);
+
+                    $result = $mysqli->query("SELECT * FROM `news` WHERE 1");
+                    // $row = array_reverse($result->fetch_assoc());
+
+                    
+                    // for ($i = 0; $i < 3; $i++) {
+                    //     echo '<a href="newsItem.php?id='. $row['id'] .'"><div class="news__item">
+                    //             <p class="news__date section__text">
+                    //                 '. $row['date'] .'
+                    //             </p>
+                    //             <div class="news__line"></div>
+                    //             <h3 class="news__title section__subtitle">
+                    //                 '. $row['title'] .'
+                    //             </h3>
+                    //             <p class="news__text_">
+                    //                 '. mb_strimwidth($row['text'], 0, 100) . '...' . '
+                    //             </p>
+                    //         </div></a>';
+                    // }
+                ?>
                 </div>
                 <div class="btn__wrapper">
                     <a href="pages/news/news.php" class="btn">Смотреть все новости</a>

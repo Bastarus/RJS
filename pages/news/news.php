@@ -38,9 +38,8 @@
                     $mysqli = new mysqli($servername, $username, $password, $database);
 
                     $result = $mysqli->query("SELECT * FROM `news` WHERE 1");
-
                     while ($row = $result->fetch_assoc()) {
-                        echo '<a href="newsItem.php?id='. $row['id'] .'"><div class="news__item">
+                        echo '<a href="newsItem.php?id='. $row['id'] .'"><div class="news__item" style="background-color: #000000; background-image: url(news-files/'. $row['file'] .')">
                                 <p class="news__date section__text">
                                     '. $row['date'] .'
                                 </p>
@@ -64,11 +63,13 @@
                     </a>
                 </div>
                 <div class="form-wrapper" id="form-wrapper">
-                    <form name="form1" method="post" action="addNews.php" class="news-form">
+                    <form enctype="multipart/form-data" name="addNews" method="post" action="addNews.php" class="news-form">
                         <label for="title">Заголовок</label>
                         <input type="text" name="title" id="title">
                         <label for="text">Текст новости</label>
                         <textarea name="text" id="text" cols="10" rows="1"></textarea>
+                        <input type="hidden" name="MAX_FILE_SIZE" value="10000000">
+                        <input type="file" name="file" id="file">
                         <input name="add" type="submit" id="add" value="Добавить">
                     </form>
                     <div class="news-btn_close" id="news-btn_close">
