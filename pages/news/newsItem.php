@@ -56,16 +56,16 @@
                     <div class="btn" id="news-btn">
                         Редактировать
                     </div>
-                    <a class="btn" id="removeNews" href="removeNews.php">
+                    <a class="btn" id="removeNews" href="removeNews.php?id=<?php echo $row['id']?>">
                         Удалить новость
                     </a>
                 </div>
                 <div class="form-wrapper" id="form-wrapper">
-                    <form name="editNews" method="post" action="editNews.php" class="news-form">
+                    <form name="editNews" method="post" action="editNews.php?id=<?php echo $row['id']?>" class="news-form">
                         <label for="title">Заголовок</label>
                         <input type="text" name="editTitle" id="title">
                         <label for="text">Текст новости</label>
-                        <textarea name="text" id="editText" cols="10" rows="1"></textarea>
+                        <textarea name="editText" id="editText" cols="10" rows="1"></textarea>
                         <input name="edit" type="submit" id="add" value="Обновить">
                     </form>
                     <div class="news-btn_close" id="news-btn_close">

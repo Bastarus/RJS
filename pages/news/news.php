@@ -39,7 +39,7 @@
 
                     $result = $mysqli->query("SELECT * FROM `news` WHERE 1");
                     while ($row = $result->fetch_assoc()) {
-                        echo '<a href="newsItem.php?id='. $row['id'] .'"><div class="news__item" style="background-color: #000000; background-image: url(news-files/'. $row['file'] .')">
+                        echo '<a href="newsItem.php?id='. $row['id'] .'"><div class="news__item" style="background-image: url(news-files/'. $row['file'] .')">
                                 <p class="news__date section__text">
                                     '. $row['date'] .'
                                 </p>
