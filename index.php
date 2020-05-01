@@ -96,15 +96,6 @@
                                     Экономика отрасли
                                 </h3>
                             </div>
-                            <div class="disciplines__card_back">
-                                <div class="section__text">
-                                    <p>
-                                        Дисциплина, цель которой заключает-ся в познании теоретических основ 
-                                        в области экономики и полу-чении практических навыков по обеспечению 
-                                        эффективной рабо-ты предприятий
-                                    </p>
-                                </div>
-                            </div>
                         </div>
                         <div class="disciplines__card">
                             <div class="disciplines__card_front">
@@ -114,15 +105,6 @@
                                 <h3 class="disciplines__title">
                                     Деньги.Кредит.Банки
                                 </h3>
-                            </div>
-                            <div class="disciplines__card_back">
-                                <div class="section__text">
-                                    <p>
-                                        Дисциплина рассматривает основные вопросы денежного обращения, 
-                                        принципы, методы и формы кредитования национальной экономики, 
-                                        механизмы работы банковской системы
-                                    </p>
-                                </div>
                             </div>
                         </div>
                         <div class="disciplines__card">
@@ -134,15 +116,6 @@
                                     Логистика
                                 </h3>
                             </div>
-                            <div class="disciplines__card_back">
-                                <div class="section__text">
-                                    <p>
-                                        Дисциплина изучает логистическую деятельность, обес-печивающую 
-                                        принятие практических решений в области оптимизации товародвижения 
-                                        в торговле.
-                                    </p>
-                                </div>
-                            </div>
                         </div>
                         <div class="disciplines__card">
                             <div class="disciplines__card_front">
@@ -152,14 +125,6 @@
                                 <h3 class="disciplines__title">
                                     Правоведение
                                 </h3>
-                            </div>
-                            <div class="disciplines__card_back">
-                                <div class="section__text">
-                                    <p>
-                                        Дисциплина изучает общие закономерности возникновения, 
-                                        развития, а также терминологию государства и права.
-                                    </p>
-                                </div>
                             </div>
                         </div>
                         <div class="disciplines__card">
@@ -171,15 +136,6 @@
                                     Рынок ценных бумаг
                                 </h3>
                             </div>
-                            <div class="disciplines__card_back">
-                                <div class="section__text">
-                                    <p>
-                                        Дисциплина изучает роль и функции рынка ценных бумаг в системе 
-                                        рыночной экономики, теоретические основы и мотивации действий субъектов 
-                                        рынка ценных бумаг
-                                    </p>
-                                </div>
-                            </div>
                         </div>
                         <div class="disciplines__card">
                             <div class="disciplines__card_front">
@@ -189,15 +145,6 @@
                                 <h3 class="disciplines__title">
                                     Теория отраслевых рынков
                                 </h3>
-                            </div>
-                            <div class="disciplines__card_back">
-                                <div class="section__text">
-                                    <p>
-                                        Дисциплина изучает основы формирования и функционирования рыночных структур, 
-                                        поведения субъектов рынка, реализации государственной отраслевой 
-                                        и промышленной политики
-                                    </p>
-                                </div>
                             </div>
                         </div>
                         <div class="disciplines__card">
@@ -209,15 +156,6 @@
                                     Экономика недвижимости
                                 </h3>
                             </div>
-                            <div class="disciplines__card_back">
-                                <div class="section__text">
-                                    <p>
-                                        Дисциплина изучает сущность и основные признаки недвижимого имущества, 
-                                        подходы и методы оценки недвижимости, особенности финансирования 
-                                        объектов недвижимости
-                                    </p>
-                                </div>
-                            </div>
                         </div>
                         <div class="disciplines__card">
                             <div class="disciplines__card_front">
@@ -227,14 +165,6 @@
                                 <h3 class="disciplines__title">
                                     Производственная практика
                                 </h3>
-                            </div>
-                            <div class="disciplines__card_back">
-                                <div class="section__text">
-                                    <p>
-                                        Производственная практика базируется на знаниях, умениях и навыках 
-                                        по дисциплинам, изученным в процессе обучения
-                                    </p>
-                                </div>
                             </div>
                         </div>
                     </div>
@@ -257,24 +187,21 @@
 
                     $mysqli = new mysqli($servername, $username, $password, $database);
 
-                    $result = $mysqli->query("SELECT * FROM `news` WHERE 1");
-                    // $row = array_reverse($result->fetch_assoc());
-
-                    
-                    // for ($i = 0; $i < 3; $i++) {
-                    //     echo '<a href="newsItem.php?id='. $row['id'] .'"><div class="news__item">
-                    //             <p class="news__date section__text">
-                    //                 '. $row['date'] .'
-                    //             </p>
-                    //             <div class="news__line"></div>
-                    //             <h3 class="news__title section__subtitle">
-                    //                 '. $row['title'] .'
-                    //             </h3>
-                    //             <p class="news__text_">
-                    //                 '. mb_strimwidth($row['text'], 0, 100) . '...' . '
-                    //             </p>
-                    //         </div></a>';
-                    // }
+                    $result = $mysqli->query("SELECT * FROM `news` WHERE 1 ORDER BY `id` DESC LIMIT 3");
+                    while ($row = $result->fetch_assoc()) {
+                        echo '<a href="pages/news/newsItem.php?id='. $row['id'] .'"><div class="news__item" style="background-image: url(pages/news/news-files/'. $row['file'] .')"> 
+                                <p class="news__date section__text">
+                                    '. $row['date'] .'
+                                </p>
+                                <div class="news__line"></div>
+                                <h3 class="news__title section__subtitle">
+                                    '. $row['title'] .'
+                                </h3>
+                                <p class="news__text_">
+                                    '. mb_strimwidth($row['text'], 0, 100) . '...' . '
+                                </p>
+                            </div></a>';
+                    }
                 ?>
                 </div>
                 <div class="btn__wrapper">

@@ -30,9 +30,11 @@ body {
     border-radius: 5px;
     box-shadow: 2px 4px 4px #131211;
     color: #000000;
+    cursor: pointer;
     font-size: 1.29rem;
     font-weight: bold;
     padding: 8px 15px;
+    transition: 0.3s;
 }
 .btn__wrapper {
     text-align: center;
@@ -63,6 +65,7 @@ body {
 .header-top {
     align-items: center;
     background-color: #131211;
+    box-shadow: 0 5px 5px black;
     display: flex;
     justify-content: space-between;
     min-height: 50px;
@@ -80,6 +83,7 @@ body {
 .header-top__button>div {
     background-color: #F4DD15;
     height: 5px;
+    transition: 0.3s;
     width: 30px;
 }
 .header-top__button>div:nth-child(2) {
@@ -159,6 +163,7 @@ body {
 .section {
     background-image: url('../img/bg/bg_mobile.png');
     background-size: cover;
+    border-top: 3px solid #F4DD15;
     padding: 30px 20px;
     position: relative;
 }
@@ -226,22 +231,16 @@ body {
 .disciplines__card {
     background: rgba(196, 196, 196, 0.2);
     border-radius: 30px;
-    box-shadow: 2px 2px 5px #131211;
     min-height: 225px;
     width: 100%;
 }
-.disciplines__card_front, .disciplines__card_back {
+.disciplines__card_front {
     align-items: center;
     display: flex;
     flex-direction: column;
     height: 100%;
     justify-content: space-between;
     padding: 40px;
-}
-.disciplines__card_back {
-    display: none;
-    padding: 20px;
-    text-align: center;
 }
 .disciplines__title {
     font-size: 1.7rem;
@@ -270,6 +269,14 @@ body {
     min-height: 200px;
     padding: 30px 20px;
     text-align: center;
+}
+.news__item, .disciplines__card {
+    box-shadow: 1px 1px 5px #131211;
+    transition: 0.3s;
+}
+.news__item:hover, .disciplines__card:hover {
+    box-shadow: 3px 3px 5px #131211;
+    transform: translateY(-10px);
 }
 .news__date {
     font-style: italic;
@@ -302,15 +309,16 @@ body {
 .form-wrapper {
     border: 1px solid #F4DD15;
     bottom: 30px;
-    display: none;
+    display: flex;
     justify-content: center;
     left: 50%;
     margin-left: -147px;
     position: absolute;
     transition: 0.5s;
+    transform: scale(0);
 }
 .form-wrapper_active {
-    display: flex;
+    transform: scale(1);
 }
 .news-form {
     background: #131211;

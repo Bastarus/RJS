@@ -38,7 +38,7 @@
                         </p>
                     </div>
                     <div class="section__img mobile">
-                        <img src="../img/Rectangle 30.png" alt="Мое фото">
+                    <a href="../img/Rectangle 30.png"><img src="../img/Rectangle 30.png" alt="Мое фото"></a>
                     </div>
                     <div class="section__text">
                         <p>

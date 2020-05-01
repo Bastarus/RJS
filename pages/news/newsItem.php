@@ -22,6 +22,7 @@
     <style>
         .header {
             background: linear-gradient(0deg, rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url("news-files/<?php echo $row['file'] ?>");
+            background-position: center;
             background-size: cover;
         }
     </style>
@@ -56,16 +57,16 @@
                     <div class="btn" id="news-btn">
                         Редактировать
                     </div>
-                    <a class="btn" id="removeNews" href="removeNews.php?id=<?php echo $row['id']?>">
+                    <a class="btn" id="removeNews" href="../../php/removeNews.php?id=<?php echo $row['id']?>">
                         Удалить новость
                     </a>
                 </div>
                 <div class="form-wrapper" id="form-wrapper">
-                    <form name="editNews" method="post" action="editNews.php?id=<?php echo $row['id']?>" class="news-form">
+                    <form name="editNews" method="post" action="../../php/editNews.php?id=<?php echo $row['id']?>" class="news-form">
                         <label for="title">Заголовок</label>
-                        <input type="text" name="editTitle" id="title">
+                        <input type="text" name="editTitle" id="title" value="<?php echo $row['title']?>">
                         <label for="text">Текст новости</label>
-                        <textarea name="editText" id="editText" cols="10" rows="1"></textarea>
+                        <textarea name="editText" id="editText" cols="10" rows="1"><?php echo $row['text']?></textarea>
                         <input name="edit" type="submit" id="add" value="Обновить">
                     </form>
                     <div class="news-btn_close" id="news-btn_close">

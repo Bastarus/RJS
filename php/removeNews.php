@@ -8,12 +8,9 @@
 
     $mysqli = new mysqli($servername, $username, $password, $database);
 
-    $editTitle = $_POST["editTitle"];
-    $editText = $_POST["editText"];
-
-    $sql = "UPDATE `news` SET `title`= '$editTitle',`text`= '$editText' WHERE `id` = $id";
+    $sql = "DELETE FROM `news` WHERE `id` = $id";
 
     $mysqli->query($sql);
 
-    header("Location: news.php");
+    header("Location: ../pages/news/news.php");
 ?>
