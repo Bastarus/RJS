@@ -201,9 +201,6 @@ body {
     font-size: 1.7rem;
     font-weight: bold;
 }
-.section__title_black {
-    color: #000000;
-}
 .section__title-block>.section__text {
     color: #F4DD15;
     font-size: 1.29rem;
@@ -231,6 +228,7 @@ body {
 .disciplines__card {
     background: rgba(196, 196, 196, 0.2);
     border-radius: 30px;
+    box-shadow: 1px 1px 5px #131211;
     min-height: 225px;
     width: 100%;
 }
@@ -262,7 +260,8 @@ body {
     background-color: rgba(0, 0, 0, 0.5);
     background-position: center;
     background-size: cover;
-    box-shadow: 2px 2px 5px #131211;
+    border: 1px solid #F4DD15;
+    box-shadow: 0 0 5px #F4DD15;
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -271,7 +270,6 @@ body {
     text-align: center;
 }
 .news__item, .disciplines__card {
-    box-shadow: 1px 1px 5px #131211;
     transition: 0.3s;
 }
 .news__item:hover, .disciplines__card:hover {

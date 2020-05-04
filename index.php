@@ -88,104 +88,115 @@
                 <div class="disciplines">
                     <div class="disciplines__cards">
                         <div class="disciplines__card">
-                            <div class="disciplines__card_front">
-                                <div class="disciplines__img">
-                                    <img src="img/icons/disp/disp1-card__img.png" alt="Экономика отрасли - иконка">
+                            <a href="pages/disciplines/discipline.php?id=1">
+                                <div class="disciplines__card_front">
+                                    <div class="disciplines__img">
+                                        <img src="img/icons/disp/disp1-card__img.png" alt="Экономика отрасли - иконка">
+                                    </div>
+                                    <h3 class="disciplines__title">
+                                        Экономика отрасли
+                                    </h3>
                                 </div>
-                                <h3 class="disciplines__title">
-                                    Экономика отрасли
-                                </h3>
-                            </div>
+                            </a>
                         </div>
                         <div class="disciplines__card">
-                            <div class="disciplines__card_front">
-                                <div class="disciplines__img">
-                                    <img src="img/icons/disp/disp2-card__img.png" alt="Деньги.Кредит.Банки - иконка">
+                            <a href="pages/disciplines/discipline.php?id=2">
+                                <div class="disciplines__card_front">
+                                    <div class="disciplines__img">
+                                        <img src="img/icons/disp/disp2-card__img.png" alt="Деньги.Кредит.Банки - иконка">
+                                    </div>
+                                    <h3 class="disciplines__title">
+                                        Деньги.Кредит.Банки
+                                    </h3>
                                 </div>
-                                <h3 class="disciplines__title">
-                                    Деньги.Кредит.Банки
-                                </h3>
-                            </div>
+                            </a>
                         </div>
                         <div class="disciplines__card">
-                            <div class="disciplines__card_front">
-                                <div class="disciplines__img">
-                                    <img src="img/icons/disp/disp3-card__img.png" alt="Логистика - иконка">
+                            <a href="pages/disciplines/discipline.php?id=3">
+                                <div class="disciplines__card_front">
+                                    <div class="disciplines__img">
+                                        <img src="img/icons/disp/disp3-card__img.png" alt="Логистика - иконка">
+                                    </div>
+                                    <h3 class="disciplines__title">
+                                        Логистика
+                                    </h3>
                                 </div>
-                                <h3 class="disciplines__title">
-                                    Логистика
-                                </h3>
-                            </div>
+                            </a>
                         </div>
                         <div class="disciplines__card">
-                            <div class="disciplines__card_front">
-                                <div class="disciplines__img">
-                                    <img src="img/icons/disp/disp4-card__img.png" alt="Правоведение - иконка">
+                            <a href="pages/disciplines/discipline.php?id=4">
+                                <div class="disciplines__card_front">
+                                    <div class="disciplines__img">
+                                        <img src="img/icons/disp/disp4-card__img.png" alt="Правоведение - иконка">
+                                    </div>
+                                    <h3 class="disciplines__title">
+                                        Правоведение
+                                    </h3>
                                 </div>
-                                <h3 class="disciplines__title">
-                                    Правоведение
-                                </h3>
-                            </div>
+                            </a>
                         </div>
                         <div class="disciplines__card">
-                            <div class="disciplines__card_front">
-                                <div class="disciplines__img">
-                                    <img src="img/icons/disp/disp5-card__img.png" alt="Рынок ценных бумаг - иконка">
+                            <a href="pages/disciplines/discipline.php?id=5">
+                                <div class="disciplines__card_front">
+                                    <div class="disciplines__img">
+                                        <img src="img/icons/disp/disp5-card__img.png" alt="Рынок ценных бумаг - иконка">
+                                    </div>
+                                    <h3 class="disciplines__title">
+                                        Рынок ценных бумаг
+                                    </h3>
                                 </div>
-                                <h3 class="disciplines__title">
-                                    Рынок ценных бумаг
-                                </h3>
-                            </div>
+                            </a>
                         </div>
                         <div class="disciplines__card">
-                            <div class="disciplines__card_front">
-                                <div class="disciplines__img">
-                                    <img src="img/icons/disp/disp6-card__img.png" alt="Теория отраслевых рынков - иконка">
+                            <a href="pages/disciplines/discipline.php?id=6">
+                                <div class="disciplines__card_front">
+                                    <div class="disciplines__img">
+                                        <img src="img/icons/disp/disp6-card__img.png" alt="Теория отраслевых рынков - иконка">
+                                    </div>
+                                    <h3 class="disciplines__title">
+                                        Теория отраслевых рынков
+                                    </h3>
                                 </div>
-                                <h3 class="disciplines__title">
-                                    Теория отраслевых рынков
-                                </h3>
-                            </div>
+                            </a>
                         </div>
                         <div class="disciplines__card">
-                            <div class="disciplines__card_front">
-                                <div class="disciplines__img">
-                                    <img src="img/icons/disp/disp7-card__img.png" alt="Экономика недвижимости - иконка">
+                            <a href="pages/disciplines/discipline.php?id=7">
+                                <div class="disciplines__card_front">
+                                    <div class="disciplines__img">
+                                        <img src="img/icons/disp/disp7-card__img.png" alt="Экономика недвижимости - иконка">
+                                    </div>
+                                    <h3 class="disciplines__title">
+                                        Экономика недвижимости
+                                    </h3>
                                 </div>
-                                <h3 class="disciplines__title">
-                                    Экономика недвижимости
-                                </h3>
-                            </div>
+                            </a>
                         </div>
                         <div class="disciplines__card">
-                            <div class="disciplines__card_front">
-                                <div class="disciplines__img">
-                                    <img src="img/icons/disp/disp8-card__img.png" alt="Производственная практика - иконка">
+                            <a href="pages/disciplines/discipline.php?id=8">
+                                <div class="disciplines__card_front">
+                                    <div class="disciplines__img">
+                                        <img src="img/icons/disp/disp8-card__img.png" alt="Производственная практика - иконка">
+                                    </div>
+                                    <h3 class="disciplines__title">
+                                        Производственная практика
+                                    </h3>
                                 </div>
-                                <h3 class="disciplines__title">
-                                    Производственная практика
-                                </h3>
-                            </div>
+                            </a>
                         </div>
                     </div>
                 </div>
             </div>
         </section>
-        <section class="section section_bg-lines">
+        <section class="section section_black">
             <div class="section__main">
                 <div class="section__title-block">
-                    <h2 class="section__title section__title_black">
+                    <h2 class="section__title">
                         Последние новости
                     </h2>
                 </div>
                 <div class="news">
                 <?php
-                    $servername = "localhost";
-                    $database = "rjs";
-                    $username = "root";
-                    $password = "";
-
-                    $mysqli = new mysqli($servername, $username, $password, $database);
+                    require_once 'E:/Projects/RJS/php/connectDB.php';
 
                     $result = $mysqli->query("SELECT * FROM `news` WHERE 1 ORDER BY `id` DESC LIMIT 3");
                     while ($row = $result->fetch_assoc()) {

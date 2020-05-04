@@ -33,7 +33,7 @@
         <div class="header-main">
             <div class="header-main__info">
                 <h1 class="header-main__title">
-                   <?php echo $row['title']; ?>
+                   <?=$row['title']?>
                 </h1>
                 <a href="" class="btn">
                     Вперед

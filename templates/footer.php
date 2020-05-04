@@ -33,49 +33,47 @@
                     Файлы
             </li>
             <li class="footer__item">
-                <a href="">
+                <a href="/pages/disciplines/discipline.php?id=1">
                     Экономика отрасли
                 </a>
             </li>
             <li class="footer__item">
-                <a href="">
+                <a href="/pages/disciplines/discipline.php?id=2">
                     Деньги.Кредит.Банки
                 </a>
             </li>
             <li class="footer__item">
-                <a href="">
+                <a href="/pages/disciplines/discipline.php?id=3">
                     Логистика
                 </a>
             </li>
             <li class="footer__item">
-                <a href="">
+                <a href="/pages/disciplines/discipline.php?id=4">
                     Правоведение
                 </a>
             </li>
         </ul>
         <ul class="footer__list footer__list_right">
             <li class="footer__item footer__item_bold">
-                <a href="">
-                    
-                </a>
+
             </li>
             <li class="footer__item">
-                <a href="">
+                <a href="/pages/disciplines/discipline.php?id=5">
                     Рынок ценных бумаг
                 </a>
             </li>
             <li class="footer__item">
-                <a href="">
+                <a href="/pages/disciplines/discipline.php?id=6">
                     Теория отраслевых рынков
                 </a>
             </li>
             <li class="footer__item">
-                <a href="">
+                <a href="/pages/disciplines/discipline.php?id=7">
                     Экономика недвижимости
                 </a>
             </li>
             <li class="footer__item">
-                <a href="">
+                <a href="/pages/disciplines/discipline.php?id=8">
                     Производственная практика
                 </a>
             </li>

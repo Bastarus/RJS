@@ -26,16 +26,11 @@
         </div>
     </header>
     <main>
-        <section class="section section_bg-lines">
+        <section class="section section_black">
             <div class="section__main">
                 <div class="news">
                 <?php
-                    $servername = "localhost";
-                    $database = "rjs";
-                    $username = "root";
-                    $password = "";
-
-                    $mysqli = new mysqli($servername, $username, $password, $database);
+                    require_once 'E:/Projects/RJS/php/connectDB.php';
 
                     $result = $mysqli->query("SELECT * FROM `news` WHERE 1 ORDER BY `id` DESC");
                     while ($row = $result->fetch_assoc()) {

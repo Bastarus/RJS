@@ -1,12 +1,7 @@
 <?php
-    $servername = "localhost";
-    $database = "rjs";
-    $username = "root";
-    $password = "";
+    require_once 'E:/Projects/RJS/php/connectDB.php';
 
     $id = $_GET['id'];
-
-    $mysqli = new mysqli($servername, $username, $password, $database);
 
     $editTitle = $_POST["editTitle"];
     $editText = $_POST["editText"];
