@@ -83,7 +83,7 @@
                             <img src="../img/icons/about/about-card1__img.png" alt="Преподаватель">
                         </div>
                         <h3 class="progress__title" id="progress__title1">
-                            
+                            12
                         </h3>
                         <p class="progress__text">
                             Преподаваемых дисциплин

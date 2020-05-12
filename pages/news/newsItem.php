@@ -54,7 +54,7 @@
                     </div>
                 </div>
                 <div class="news__buttons">
-                    <div class="btn" id="news-btn">
+                    <div class="btn" id="openForm">
                         Редактировать
                     </div>
                     <a class="btn" id="removeNews" href="../../php/removeNews.php?id=<?php echo $row['id']?>">
@@ -62,7 +62,7 @@
                     </a>
                 </div>
                 <div class="form-wrapper" id="form-wrapper">
-                    <form name="editNews" method="post" action="../../php/editNews.php?id=<?php echo $row['id']?>" class="news-form">
+                    <form name="editNews" method="post" action="../../php/editNews.php?id=<?php echo $row['id']?>" class="form">
                         <label for="title">Заголовок</label>
                         <input type="text" name="editTitle" id="title" value="<?php echo $row['title']?>">
                         <label for="text">Текст новости</label>

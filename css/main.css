@@ -295,10 +295,11 @@ body {
     font-size: 2rem;
     line-height: 2rem;
 }
-.news__buttons {
+.news__buttons, .files__buttons {
     align-items: center;
     display: flex;
     flex-direction: column;
+    position: relative;
     text-align: center;
 }
 .news__buttons>.btn {
@@ -306,7 +307,7 @@ body {
 }
 .form-wrapper {
     border: 1px solid #F4DD15;
-    bottom: 30px;
+    bottom: auto;
     display: flex;
     justify-content: center;
     left: 50%;
@@ -318,19 +319,19 @@ body {
 .form-wrapper_active {
     transform: scale(1);
 }
-.news-form {
+.form {
     background: #131211;
     display: flex;
     flex-direction: column;
     padding: 30px;
 }
-.news-form>input, .news-form>textarea {
+.form>input, .form>textarea, .form>select {
     background: none;
     border: 1px solid #ffffff;
     color: #ffffff;
     margin-bottom: 15px;
 }
-.news-form>#image {
+.form>#image {
     margin-top: 15px;
 }
 input, textarea {
@@ -379,6 +380,21 @@ input, textarea {
     font-size: 1.29rem;
     font-weight: bold;
     margin-bottom: 5px;
+}
+
+.files-wrapper {
+    display: flex;
+    flex-direction: column;
+}
+.files-item {
+    align-items: center;
+    border: 1px solid #F4DD15;
+    display: flex;
+    margin: 10px 0;
+}
+.files__icon {
+    margin-right: 10px;
+    max-width: 5%;
 }
 
 .footer {
@@ -513,9 +529,12 @@ input, textarea {
         width: 30%;
     }
 
-    .news__buttons {
+    .news__buttons, .files__buttons {
         flex-direction: row;
         justify-content: space-between;
+    }
+    .files__title {
+        font-size: 1.7rem;
     }
 }
 

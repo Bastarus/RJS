@@ -50,7 +50,7 @@
                 ?>
                 </div>
                 <div class="news__buttons">
-                    <div class="btn" id="news-btn">
+                    <div class="btn" id="openForm">
                         Добавить новость
                     </div>
                     <a href="" class="btn">
@@ -58,13 +58,13 @@
                     </a>
                 </div>
                 <div class="form-wrapper" id="form-wrapper">
-                    <form enctype="multipart/form-data" name="addNews" method="post" action="../../php/addNews.php" class="news-form">
+                    <form enctype="multipart/form-data" name="addNews" method="post" action="../../php/addNews.php" class="form">
                         <label for="title">Заголовок</label>
                         <input type="text" name="title" id="title">
                         <label for="text">Текст новости</label>
                         <textarea name="text" id="text" cols="10" rows="1"></textarea>
                         <input type="hidden" name="MAX_FILE_SIZE" value="10000000">
-                        <input type="file" name="file" id="file" multiple>
+                        <input type="file" name="file" id="file">
                         <input name="add" type="submit" id="add" value="Добавить">
                     </form>
                     <div class="news-btn_close" id="news-btn_close">

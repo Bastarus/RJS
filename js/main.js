@@ -16,7 +16,7 @@ function openHeaderMenu() {
 
 setEventListener(headerButton, openHeaderMenu);
 
-let newsButton = document.getElementById('news-btn');
+let newsButton = document.getElementById('openForm');
 let newsForm = document.getElementById('form-wrapper');
 let closeFormButton = document.getElementById('news-btn_close');
 
