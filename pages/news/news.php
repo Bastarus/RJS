@@ -16,9 +16,9 @@
                 <h1 class="header-main__title">
                     Новости
                 </h1>
-                <a href="" class="btn">
+                <button class="btn header-btn">
                     Вперед
-                </a>
+                </button>
             </div>
             <div class="header-main__img">
                 <img src="../../img/header-img/news-img.png" alt="Новости">
@@ -26,7 +26,7 @@
         </div>
     </header>
     <main>
-        <section class="section section_black">
+        <section class="section section_black" id="firstSection">
             <div class="section__main">
                 <div class="news">
                 <?php
@@ -56,19 +56,19 @@
                     <a href="" class="btn">
                         Загрузить следующие
                     </a>
-                </div>
-                <div class="form-wrapper" id="form-wrapper">
-                    <form enctype="multipart/form-data" name="addNews" method="post" action="../../php/addNews.php" class="form">
-                        <label for="title">Заголовок</label>
-                        <input type="text" name="title" id="title">
-                        <label for="text">Текст новости</label>
-                        <textarea name="text" id="text" cols="10" rows="1"></textarea>
-                        <input type="hidden" name="MAX_FILE_SIZE" value="10000000">
-                        <input type="file" name="file" id="file">
-                        <input name="add" type="submit" id="add" value="Добавить">
-                    </form>
-                    <div class="news-btn_close" id="news-btn_close">
-                        <img src="../../img/icons/close.png" alt="Закрыть форму">
+                    <div class="form-wrapper" id="form-wrapper">
+                        <form enctype="multipart/form-data" name="addNews" method="post" action="../../php/addNews.php" class="form">
+                            <label for="title">Заголовок</label>
+                            <input type="text" name="title" id="title">
+                            <label for="text">Текст новости</label>
+                            <textarea name="text" id="text" cols="10" rows="1"></textarea>
+                            <input type="hidden" name="MAX_FILE_SIZE" value="10000000">
+                            <input type="file" name="file" id="file">
+                            <input name="add" type="submit" id="add" value="Добавить">
+                        </form>
+                        <div class="closeForm" id="closeForm">
+                            <img src="../../img/icons/close.png" alt="Закрыть форму">
+                        </div>
                     </div>
                 </div>
             </div>

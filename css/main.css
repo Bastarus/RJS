@@ -27,6 +27,7 @@ body {
 
 .btn {
     background-color: #F4DD15;
+    border: none;
     border-radius: 5px;
     box-shadow: 2px 4px 4px #131211;
     color: #000000;
@@ -99,7 +100,7 @@ body {
     transform: translateY(-100%) rotateZ(-45deg);
 }
 
-.header-top__menu {
+.headerMenu {
     background-color: #131211;
     left: 0;
     padding: 30px;
@@ -109,22 +110,44 @@ body {
     transition: all 0.3s;
     width: 100%;
 }
-.header-top__menu_active {
+.headerMenu_active {
     bottom: auto;
     display: block;
     top: 100%;
     transform: translateY(0);
     z-index: 2;
 }
-.header-top__menu ul li {
+.headerMenu__item {
     font-size: 1.29rem;
     font-weight: bold;
     margin-bottom: 10px;
+    position: relative;
 }
-.header-top__menu ul li:hover, .footer__list>li:hover {
+.headerMenu__item span {
+    backface-visibility: hidden;
+    background-color: #111;
+    display: block;
+    height: 100%;
+    left: 0;
+    overflow: hidden;
+    position: absolute;
+    transition: width 0.3s;
+    width: 0;
+}
+.headerMenu__item span::before {
+    backface-visibility: hidden;
     color: #F4DD15;
-    transition: 0.5s;
+    content: attr(data-text);
+    display: block;
+    position: absolute;
+    right: 0;
+    width: 100%;
 }
+.headerMenu__item:hover span {
+    transition: width 0.3s;
+    width: 100%;
+}
+
 .user-menu__btn_desktop {
     display: none;
 }
@@ -337,7 +360,7 @@ body {
 input, textarea {
     padding: 10px;
 }
-.news-btn_close {
+.closeForm {
     border-radius: 50%;
     margin-right: -15px;
     margin-top: -15px;
@@ -394,7 +417,7 @@ input, textarea {
 }
 .files__icon {
     margin-right: 10px;
-    max-width: 5%;
+    max-width: 10%;
 }
 
 .footer {
@@ -415,6 +438,11 @@ input, textarea {
 }
 .footer__item {
     margin-bottom: 5px;
+    transition: 0.3s;
+}
+.footer__item:hover:not(.footer__item_bold) {
+    color: #F4DD15;
+    transform: translateX(10px);
 }
 .footer__item_bold {
     color: #F4DD15;
@@ -484,18 +512,18 @@ input, textarea {
     .header-top__button {
         display: none;
     }
-    .header-top__menu {
+    .headerMenu {
         padding: 0;
         position: static;
         transform: none;
         width: 70%;
     }
-    .header-top__menu>ul {
+    .headerMenu>ul {
         align-items: center;
         display: flex;
         justify-content: flex-end;
     }
-    .header-top__menu ul li {
+    .headerMenu__item {
         font-size: 1rem;
         margin-bottom: 0;
         margin-left: 20px;
@@ -599,6 +627,10 @@ input, textarea {
         grid-template-columns: 1fr 1fr;
     }
 
+    .files__icon {
+        max-width: 5%;
+    }
+
     .footer__menu {
         align-items: flex-end;
         grid-template-columns: 1fr 1fr 1fr;
@@ -621,7 +653,7 @@ input, textarea {
     .header_big {
         min-height: 80vh;
     }
-    .header-top__menu ul li {
+    .headerMenu__item {
         font-size: 1.2rem;
     }
     .user-menu__btn_desktop {

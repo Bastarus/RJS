@@ -21,9 +21,9 @@
                     Dolore est consectetur exercitation exercitation esse dolore eiusmod anim anim proident cillum in id. 
                     Elit reprehenderit aliquip deserunt eu aliquip.
                 </p>
-                <a href="#first-section" class="btn">
+                <button href="" class="btn header-btn">
                     Вперед
-                </a>
+                </button>
             </div>
             <div class="header-main__img">
                 <img src="img/header-img/header__img.png" alt="Фото">
@@ -31,7 +31,7 @@
         </div>
     </header>
     <main>
-        <section class="section section_bg-lines section_withBB" id="first-section">
+        <section class="section section_bg-lines section_withBB" id="firstSection">
             <div class="section__main section__main_row">
                 <div class="section__img desktop">
                     <img src="img/section1__img.png" alt="Фото">

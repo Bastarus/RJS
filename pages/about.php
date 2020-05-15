@@ -16,9 +16,9 @@
                 <h1 class="header-main__title">
                     Обо мне
                 </h1>
-                <a href="" class="btn">
+                <button class="btn header-btn">
                     Вперед
-                </a>
+                </button>
             </div>
             <div class="header-main__img">
                 <img src="../img/header-img/about-img.png" alt="Обо мне">
@@ -26,7 +26,7 @@
         </div>
     </header>
     <main>
-        <section class="section section_black">
+        <section class="section section_black" id="firstSection">
             <div class="section__main section__main_row">
                 <div class="section__info">
                     <div class="section__title-block">

@@ -17,8 +17,6 @@
         $title = $row['title'];
         require_once '../../templates/head.php';
     ?>
-</head>
-<body>
     <style>
         .header {
             background: linear-gradient(0deg, rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url("news-files/<?php echo $row['file'] ?>");
@@ -26,6 +24,8 @@
             background-size: cover;
         }
     </style>
+</head>
+<body>
     <header class="header header_big">
         <?php
             require_once 'E:/Projects/RJS/templates/header-top.php';
@@ -35,14 +35,14 @@
                 <h1 class="header-main__title">
                    <?=$row['title']?>
                 </h1>
-                <a href="" class="btn">
+                <button class="btn header-btn">
                     Вперед
-                </a>
+                </button>
             </div>
         </div>
     </header>
     <main>
-        <section class="section section_black">
+        <section class="section section_black" id="firstSection">
             <div class="section__main">
                 <div class="section__info">
                     <div class="section__text newsItem__text">
@@ -60,17 +60,17 @@
                     <a class="btn" id="removeNews" href="../../php/removeNews.php?id=<?php echo $row['id']?>">
                         Удалить новость
                     </a>
-                </div>
-                <div class="form-wrapper" id="form-wrapper">
-                    <form name="editNews" method="post" action="../../php/editNews.php?id=<?php echo $row['id']?>" class="form">
-                        <label for="title">Заголовок</label>
-                        <input type="text" name="editTitle" id="title" value="<?php echo $row['title']?>">
-                        <label for="text">Текст новости</label>
-                        <textarea name="editText" id="editText" cols="10" rows="1"><?php echo $row['text']?></textarea>
-                        <input name="edit" type="submit" id="add" value="Обновить">
-                    </form>
-                    <div class="news-btn_close" id="news-btn_close">
-                        <img src="../../img/icons/close.png" alt="Закрыть форму">
+                    <div class="form-wrapper" id="form-wrapper">
+                        <form name="editNews" method="post" action="../../php/editNews.php?id=<?php echo $row['id']?>" class="form">
+                            <label for="title">Заголовок</label>
+                            <input type="text" name="editTitle" id="title" value="<?php echo $row['title']?>">
+                            <label for="text">Текст новости</label>
+                            <textarea name="editText" id="editText" cols="10" rows="1"><?php echo $row['text']?></textarea>
+                            <input name="edit" type="submit" id="add" value="Обновить">
+                        </form>
+                        <div class="closeForm" id="closeForm">
+                            <img src="../../img/icons/close.png" alt="Закрыть форму">
+                        </div>
                     </div>
                 </div>
             </div>

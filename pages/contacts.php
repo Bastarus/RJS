@@ -16,9 +16,9 @@
                 <h1 class="header-main__title">
                     Контакты
                 </h1>
-                <a href="" class="btn">
+                <button class="btn header-btn">
                     Вперед
-                </a>
+                </button>
             </div>
             <div class="header-main__img">
                 <img src="../img/header-img/contacts-img.png" alt="Контакты">
@@ -26,7 +26,7 @@
         </div>
     </header>
     <main>
-        <section class="section section_contacts section_black">
+        <section class="section section_contacts section_black" id="firstSection">
             <div class="section__main">
                 <div class="section__info contacts">
                     <div class="section__text">

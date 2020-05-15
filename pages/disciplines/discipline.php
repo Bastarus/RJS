@@ -24,14 +24,14 @@
                 <h1 class="header-main__title">
                     <?=$title?>
                 </h1>
-                <a href="" class="btn">
+                <button class="btn header-btn">
                     Вперед
-                </a>
+                </button>
             </div>
         </div>
     </header>
     <main>
-        <section class="section section_black">
+        <section class="section section_black" id="firstSection" id="firstSection">
             <div class="section__main">
                 <div class="files__buttons">
                     <div class="btn" id="openForm">
@@ -57,7 +57,7 @@
                             <input type="hidden" name="id" value="<?=$id?>" id="id">
                             <input name="add" type="submit" id="add" value="Загрузить">
                         </form>
-                        <div class="news-btn_close" id="news-btn_close">
+                        <div class="closeForm" id="closeForm">
                             <img src="../../img/icons/close.png" alt="Закрыть форму">
                         </div>
                     </div>
@@ -68,7 +68,7 @@
                         $result = $mysqli->query($sql);
 
                         while ($row = $result->fetch_assoc()) {
-                            echo '<a class="files-item" href="discipline-files/'. $row['name'] .'">
+                            echo '<a class="files-item" href="disciplines-files/'. $row['name'] .'">
                                     <div class="files__icon">
                                         <img src="../../img/icons/download-icon.png" alt="Иконка загрузки">
                                     </div>
