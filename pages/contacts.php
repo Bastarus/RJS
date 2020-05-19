@@ -3,13 +3,13 @@
 <head>
     <?php
         $title = 'Контакты';
-        require_once 'E:/Projects/RJS/templates/head.php';
+        require_once '../templates/head.php';
     ?>
 </head>
 <body>
     <header class="header">
         <?php
-            require_once 'E:/Projects/RJS/templates/header-top.php';
+            require_once '../templates/header-top.php';
         ?>
         <div class="header-main">
             <div class="header-main__info">
@@ -57,7 +57,7 @@
         </section>
     </main>
     <?php
-        require_once 'E:\Projects\RJS\/templates/footer.php';
+        require_once '../templates/footer.php';
     ?>
 </body>
 </html>

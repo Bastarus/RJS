@@ -9,7 +9,7 @@
 <body>
     <header class="header">
         <?php
-            require_once 'E:/Projects/RJS/templates/header-top.php';
+            require_once '../../templates/header-top.php';
         ?>
         <div class="header-main">
             <div class="header-main__info">
@@ -30,22 +30,24 @@
             <div class="section__main">
                 <div class="news">
                 <?php
-                    require_once 'E:/Projects/RJS/php/connectDB.php';
+                    require_once '../../php/connectDB.php';
 
                     $result = $mysqli->query("SELECT * FROM `news` WHERE 1 ORDER BY `id` DESC");
                     while ($row = $result->fetch_assoc()) {
-                        echo '<a href="newsItem.php?id='. $row['id'] .'"><div class="news__item" style="background-image: url(news-files/'. $row['file'] .')">
-                                <p class="news__date section__text">
-                                    '. $row['date'] .'
-                                </p>
-                                <div class="news__line"></div>
-                                <h3 class="news__title section__subtitle">
-                                    '. $row['title'] .'
-                                </h3>
-                                <p class="news__text_">
-                                    '. mb_strimwidth($row['text'], 0, 100) . '...' . '
-                                </p>
-                            </div></a>';
+                        echo '<a href="newsItem.php?id='. $row['id'] .'">
+                                <div class="news__item" style="background: linear-gradient(0deg, rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url(news-files/'. $row['file'] .'); background-position: center; background-size: cover;">
+                                    <p class="news__date section__text">
+                                        '. $row['date'] .'
+                                    </p>
+                                    <div class="news__line"></div>
+                                    <h3 class="news__title section__subtitle">
+                                        '. $row['title'] .'
+                                    </h3>
+                                    <p class="news__text_">
+                                        '. mb_strimwidth($row['text'], 0, 100) . '...' . '
+                                    </p>
+                                </div>
+                            </a>';
                     }
                 ?>
                 </div>
@@ -75,7 +77,7 @@
         </section>
     </main>
     <?php
-        require_once 'E:\Projects\RJS\templates/footer.php';
+        require_once '../../templates/footer.php';
     ?>
 </body>
 </html>

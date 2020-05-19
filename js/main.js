@@ -10,19 +10,18 @@ function stopDefAction(evt) {
   evt.preventDefault();
 }
 
-let headerButton = document.querySelector('#headerButton');
-let headerMenu = document.querySelector('#headerMenu');
-
 function openHeaderMenu() {
   headerMenu.classList.toggle('headerMenu_active');
   headerButton.classList.toggle('header-top__button_active');
 }
 
-setEventListener(headerButton, openHeaderMenu);
-
-let formButton = document.querySelector('#openForm');
-let formWrapper = document.querySelector('#form-wrapper');
-let closeFormButton = document.querySelector('#closeForm');
+function scrollTo(elem) {
+  window.scroll({
+    left: 0,
+    top: elem.offsetTop,
+    behavior: 'smooth'
+  })
+}
 
 let formActivity = {
   openForm: function() {
@@ -33,20 +32,21 @@ let formActivity = {
   }
 }
 
+let headerButton = document.querySelector('#headerButton');
+let headerMenu = document.querySelector('#headerMenu');
+
+
+setEventListener(headerButton, openHeaderMenu);
+
+let formButton = document.querySelector('#openForm');
+let formWrapper = document.querySelector('#form-wrapper');
+let closeFormButton = document.querySelector('#closeForm');
+
 setEventListener(formButton, formActivity.openForm);
 setEventListener(closeFormButton, formActivity.closeForm);
 
 let scrollButton = document.querySelector('.header-btn');
 let firstSection = document.querySelector('#firstSection');
-
-
-function scrollTo(elem) {
-  window.scroll({
-    left: 0,
-    top: elem.offsetTop,
-    behavior: 'smooth'
-  })
-}
 
 setEventListener(scrollButton, function() {
   scrollTo(firstSection);

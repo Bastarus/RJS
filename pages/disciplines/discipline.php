@@ -2,7 +2,7 @@
 <html lang="ru">
 <head>
     <?php
-        require_once 'E:/Projects/RJS/php/connectDB.php';
+        require_once '../../php/connectDB.php';
 
         $id = $_GET['id'];
 
@@ -11,13 +11,13 @@
         $row = $result->fetch_assoc();
 
         $title = $row['name'];
-        require_once 'E:/Projects/RJS/templates/head.php';
+        require_once '../../templates/head.php';
     ?>
 </head>
 <body>
     <header class="header">
         <?php
-            require_once 'E:/Projects/RJS/templates/header-top.php';
+            require_once '../../templates/header-top.php';
         ?>
         <div class="header-main">
             <div class="header-main__info">
@@ -68,22 +68,31 @@
                         $result = $mysqli->query($sql);
 
                         while ($row = $result->fetch_assoc()) {
-                            echo '<a class="files-item" href="disciplines-files/'. $row['name'] .'">
-                                    <div class="files__icon">
-                                        <img src="../../img/icons/download-icon.png" alt="Иконка загрузки">
-                                    </div>
+                            echo '<div class="files-block">
                                     <div class="files-info">
-                                        <h2 class="files__title">
-                                            '. $row['name'] .'
-                                        </h2>
-                                        <p class="files__text">
-                                            '. $title .'
-                                        </p>
-                                        <p class="files__date">
-                                            '. $row['date'] .'
-                                        </p>
+                                        <a href="disciplines-files/'. $row['name'] .'" title="'. $row['name'] .'">
+                                            <div class="files-item">
+                                                <div class="files__icon">
+                                                    <img src="../../img/icons/download-icon.png" alt="Иконка загрузки">
+                                                </div>
+                                                <div class="files-text">
+                                                    <h2 class="files__title">
+                                                        '. $row['name'] .'
+                                                    </h2>
+                                                    <p class="files__text">
+                                                        '. $title .'
+                                                    </p>
+                                                    <p class="files__date">
+                                                        '. $row['date'] .'
+                                                    </p>
+                                                </div>
+                                            </div>
+                                        </a>
                                     </div>
-                                </a>';
+                                    <a class="delete-file" href="/php/removeFile.php?id='. $row['id']. '">
+                                        <p>Удалить</p>
+                                    </a>
+                                </div>';
                         }
                     ?>
                 </div>
@@ -91,7 +100,7 @@
         </section>
     </main>
     <?php
-        require_once 'E:\Projects\RJS\templates/footer.php';
+        require_once '../../templates/footer.php';
     ?>
 </body>
 </html>

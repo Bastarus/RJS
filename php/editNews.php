@@ -1,5 +1,5 @@
 <?php
-    require_once 'E:/Projects/RJS/php/connectDB.php';
+    require_once 'connectDB.php';
 
     $id = $_GET['id'];
 

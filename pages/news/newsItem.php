@@ -28,7 +28,7 @@
 <body>
     <header class="header header_big">
         <?php
-            require_once 'E:/Projects/RJS/templates/header-top.php';
+            require_once '../../templates/header-top.php';
         ?>
         <div class="header-main">
             <div class="header-main__info">
@@ -77,7 +77,7 @@
         </section>
     </main>
     <?php
-        require_once 'E:\Projects\RJS\templates/footer.php';
+        require_once '../../templates/footer.php';
     ?>
 </body>
 </html>

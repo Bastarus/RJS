@@ -1,5 +1,5 @@
 <?php
-    require_once 'E:/Projects/RJS/php/connectDB.php';
+    require_once 'connectDB.php';
 
     $title = $_POST["title"];
     $text = $_POST["text"];

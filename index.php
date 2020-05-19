@@ -9,7 +9,7 @@
 <body>
     <header class="header header_big">
         <?php
-            require_once 'E:/Projects/RJS/templates/header-top.php';
+            require_once 'templates/header-top.php';
         ?>
         <div class="header-main">
             <div class="header-main__info">
@@ -69,6 +69,7 @@
             </div>
         </section>
         <section class="section">
+            <a href="#disciplines"></a>
             <div class="section__main">
                 <div class="section__info">
                     <div class="section__title-block">
@@ -196,7 +197,7 @@
                 </div>
                 <div class="news">
                 <?php
-                    require_once 'E:/Projects/RJS/php/connectDB.php';
+                    require_once 'php/connectDB.php';
 
                     $result = $mysqli->query("SELECT * FROM `news` WHERE 1 ORDER BY `id` DESC LIMIT 3");
                     while ($row = $result->fetch_assoc()) {
@@ -222,7 +223,7 @@
         </section>
     </main>
     <?php
-        require_once 'E:\Projects\RJS\templates/footer.php';
+        require_once 'templates/footer.php';
     ?>
 </body>
 </html>
