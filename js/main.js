@@ -25,10 +25,10 @@ function scrollTo(elem) {
 
 let formActivity = {
   openForm: function() {
-    formWrapper.classList.toggle('form-wrapper_active');
+    modal.classList.toggle('modal_active');
   },
   closeForm: function() {
-    formWrapper.classList.remove('form-wrapper_active');
+    modal.classList.remove('modal_active');
   }
 }
 
@@ -38,11 +38,11 @@ let headerMenu = document.querySelector('#headerMenu');
 
 setEventListener(headerButton, openHeaderMenu);
 
-let formButton = document.querySelector('#openForm');
-let formWrapper = document.querySelector('#form-wrapper');
+let openForm = document.querySelector('#openForm');
+let modal = document.querySelector('#modal');
 let closeFormButton = document.querySelector('#closeForm');
 
-setEventListener(formButton, formActivity.openForm);
+setEventListener(openForm, formActivity.openForm);
 setEventListener(closeFormButton, formActivity.closeForm);
 
 let scrollButton = document.querySelector('.header-btn');
@@ -51,3 +51,12 @@ let firstSection = document.querySelector('#firstSection');
 setEventListener(scrollButton, function() {
   scrollTo(firstSection);
 });
+
+let openFileList = document.querySelectorAll('.openFilesList');
+let filesCategory = document.querySelectorAll('.files-category');
+
+for(let i = 0; i < openFileList.length; i++) {
+  setEventListener(openFileList[i], function() {
+    openFileList[i].parentNode.classList.toggle('files-category_active');
+  })
+}

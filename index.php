@@ -89,7 +89,7 @@
                 <div class="disciplines">
                     <div class="disciplines__cards">
                         <div class="disciplines__card">
-                            <a href="pages/disciplines/discipline.php?id=1">
+                            <a href="pages/discipline.php?id=1">
                                 <div class="disciplines__card_front">
                                     <div class="disciplines__img">
                                         <img src="img/icons/disp/disp1-card__img.png" alt="Экономика отрасли - иконка">
@@ -101,7 +101,7 @@
                             </a>
                         </div>
                         <div class="disciplines__card">
-                            <a href="pages/disciplines/discipline.php?id=2">
+                            <a href="pages/discipline.php?id=2">
                                 <div class="disciplines__card_front">
                                     <div class="disciplines__img">
                                         <img src="img/icons/disp/disp2-card__img.png" alt="Деньги.Кредит.Банки - иконка">
@@ -113,7 +113,7 @@
                             </a>
                         </div>
                         <div class="disciplines__card">
-                            <a href="pages/disciplines/discipline.php?id=3">
+                            <a href="pages/discipline.php?id=3">
                                 <div class="disciplines__card_front">
                                     <div class="disciplines__img">
                                         <img src="img/icons/disp/disp3-card__img.png" alt="Логистика - иконка">
@@ -125,7 +125,7 @@
                             </a>
                         </div>
                         <div class="disciplines__card">
-                            <a href="pages/disciplines/discipline.php?id=4">
+                            <a href="pages/discipline.php?id=4">
                                 <div class="disciplines__card_front">
                                     <div class="disciplines__img">
                                         <img src="img/icons/disp/disp4-card__img.png" alt="Правоведение - иконка">
@@ -137,7 +137,7 @@
                             </a>
                         </div>
                         <div class="disciplines__card">
-                            <a href="pages/disciplines/discipline.php?id=5">
+                            <a href="pages/discipline.php?id=5">
                                 <div class="disciplines__card_front">
                                     <div class="disciplines__img">
                                         <img src="img/icons/disp/disp5-card__img.png" alt="Рынок ценных бумаг - иконка">
@@ -149,7 +149,7 @@
                             </a>
                         </div>
                         <div class="disciplines__card">
-                            <a href="pages/disciplines/discipline.php?id=6">
+                            <a href="pages/discipline.php?id=6">
                                 <div class="disciplines__card_front">
                                     <div class="disciplines__img">
                                         <img src="img/icons/disp/disp6-card__img.png" alt="Теория отраслевых рынков - иконка">
@@ -161,7 +161,7 @@
                             </a>
                         </div>
                         <div class="disciplines__card">
-                            <a href="pages/disciplines/discipline.php?id=7">
+                            <a href="pages/discipline.php?id=7">
                                 <div class="disciplines__card_front">
                                     <div class="disciplines__img">
                                         <img src="img/icons/disp/disp7-card__img.png" alt="Экономика недвижимости - иконка">
@@ -173,7 +173,7 @@
                             </a>
                         </div>
                         <div class="disciplines__card">
-                            <a href="pages/disciplines/discipline.php?id=8">
+                            <a href="pages/discipline.php?id=8">
                                 <div class="disciplines__card_front">
                                     <div class="disciplines__img">
                                         <img src="img/icons/disp/disp8-card__img.png" alt="Производственная практика - иконка">
@@ -201,7 +201,7 @@
 
                     $result = $mysqli->query("SELECT * FROM `news` WHERE 1 ORDER BY `id` DESC LIMIT 3");
                     while ($row = $result->fetch_assoc()) {
-                        echo '<a href="pages/news/newsItem.php?id='. $row['id'] .'"><div class="news__item" style="background-image: url(pages/news/news-files/'. $row['file'] .')"> 
+                        echo '<a href="pages/newsItem.php?id='. $row['id'] .'"><div class="news__item" style="background: linear-gradient(0deg, rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url(pages/news-files/'. $row['file'] .'); background-position: center; background-size: cover;"> 
                                 <p class="news__date section__text">
                                     '. $row['date'] .'
                                 </p>
@@ -217,7 +217,7 @@
                 ?>
                 </div>
                 <div class="btn__wrapper">
-                    <a href="pages/news/news.php" class="btn">Смотреть все новости</a>
+                    <a href="pages/news.php" class="btn">Смотреть все новости</a>
                 </div>
             </div>
         </section>

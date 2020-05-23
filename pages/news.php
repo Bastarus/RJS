@@ -3,13 +3,31 @@
 <head>
     <?php
         $title = 'Новости';
-        require_once '../../templates/head.php';
+        require_once '../templates/head.php';
     ?>
 </head>
 <body>
+    <div class="modal" id="modal">
+        <div class="modal-content">
+            <div class="form-wrapper" id="form-wrapper">
+                <form enctype="multipart/form-data" name="addNews" method="post" action="../../php/addNews.php" class="form">
+                    <label for="title">Заголовок</label>
+                    <input type="text" name="title" id="title" required>
+                    <label for="text">Текст новости</label>
+                    <textarea name="text" id="text" cols="10" rows="1" required></textarea>
+                    <input type="hidden" name="MAX_FILE_SIZE" value="10000000">
+                    <input type="file" name="file" id="file">
+                    <input name="add" type="submit" id="add" value="Добавить">
+                </form>
+                <div class="closeForm" id="closeForm">
+                    <img src="../../img/icons/close.png" alt="Закрыть форму">
+                </div>
+            </div>
+        </div>
+    </div>
     <header class="header">
         <?php
-            require_once '../../templates/header-top.php';
+            require_once '../templates/header-top.php';
         ?>
         <div class="header-main">
             <div class="header-main__info">
@@ -30,7 +48,7 @@
             <div class="section__main">
                 <div class="news">
                 <?php
-                    require_once '../../php/connectDB.php';
+                    require_once '../php/connectDB.php';
 
                     $result = $mysqli->query("SELECT * FROM `news` WHERE 1 ORDER BY `id` DESC");
                     while ($row = $result->fetch_assoc()) {
@@ -58,26 +76,12 @@
                     <a href="" class="btn">
                         Загрузить следующие
                     </a>
-                    <div class="form-wrapper" id="form-wrapper">
-                        <form enctype="multipart/form-data" name="addNews" method="post" action="../../php/addNews.php" class="form">
-                            <label for="title">Заголовок</label>
-                            <input type="text" name="title" id="title">
-                            <label for="text">Текст новости</label>
-                            <textarea name="text" id="text" cols="10" rows="1"></textarea>
-                            <input type="hidden" name="MAX_FILE_SIZE" value="10000000">
-                            <input type="file" name="file" id="file">
-                            <input name="add" type="submit" id="add" value="Добавить">
-                        </form>
-                        <div class="closeForm" id="closeForm">
-                            <img src="../../img/icons/close.png" alt="Закрыть форму">
-                        </div>
-                    </div>
                 </div>
             </div>
         </section>
     </main>
     <?php
-        require_once '../../templates/footer.php';
+        require_once '../templates/footer.php';
     ?>
 </body>
 </html>

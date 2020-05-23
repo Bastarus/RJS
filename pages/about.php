@@ -65,9 +65,9 @@
                         </p>
                     </div>
                     <div class="soc">
-                        <div><a href=""><img src="../img/icons/soc/facebook-logo.svg" alt="Facebook"></a></div>
-                        <div><a href=""><img src="../img/icons/soc/vk-logo.svg" alt="VK"></a></div>
-                        <div><a href=""><img src="../img/icons/soc/whatsapp-logo.svg" alt="WhatsApp"></a></div>
+                        <div><a href=""><img src="../img/icons/soc/facebook-logo.png" alt="Facebook"></a></div>
+                        <div><a href=""><img src="../img/icons/soc/vk-logo.png" alt="VK"></a></div>
+                        <div><a href=""><img src="../img/icons/soc/whatsapp-logo.png" alt="WhatsApp"></a></div>
                     </div>
                 </div>
                 <div class="section__img desktop">

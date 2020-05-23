@@ -18,7 +18,7 @@
                 </a>
             </li>
             <li class="footer__item">
-                <a href="/pages/news/news.php">
+                <a href="/pages/news.php">
                     Новости
                 </a>
             </li>
@@ -33,22 +33,22 @@
                     Файлы
             </li>
             <li class="footer__item">
-                <a href="/pages/disciplines/discipline.php?id=1">
+                <a href="/pages/discipline.php?id=1">
                     Экономика отрасли
                 </a>
             </li>
             <li class="footer__item">
-                <a href="/pages/disciplines/discipline.php?id=2">
+                <a href="/pages/discipline.php?id=2">
                     Деньги.Кредит.Банки
                 </a>
             </li>
             <li class="footer__item">
-                <a href="/pages/disciplines/discipline.php?id=3">
+                <a href="/pages/discipline.php?id=3">
                     Логистика
                 </a>
             </li>
             <li class="footer__item">
-                <a href="/pages/disciplines/discipline.php?id=4">
+                <a href="/pages/discipline.php?id=4">
                     Правоведение
                 </a>
             </li>
@@ -58,22 +58,22 @@
 
             </li>
             <li class="footer__item">
-                <a href="/pages/disciplines/discipline.php?id=5">
+                <a href="/pages/discipline.php?id=5">
                     Рынок ценных бумаг
                 </a>
             </li>
             <li class="footer__item">
-                <a href="/pages/disciplines/discipline.php?id=6">
+                <a href="/pages/discipline.php?id=6">
                     Теория отраслевых рынков
                 </a>
             </li>
             <li class="footer__item">
-                <a href="/pages/disciplines/discipline.php?id=7">
+                <a href="/pages/discipline.php?id=7">
                     Экономика недвижимости
                 </a>
             </li>
             <li class="footer__item">
-                <a href="/pages/disciplines/discipline.php?id=8">
+                <a href="/pages/discipline.php?id=8">
                     Производственная практика
                 </a>
             </li>

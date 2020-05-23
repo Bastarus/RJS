@@ -16,7 +16,7 @@
                 <a href="/pages/about.php"><span data-text="Обо&nbsp;мне"></span>Обо мне</a>
             </li>
             <li class="headerMenu__item">
-                <a href="/pages/news/news.php"><span data-text="Новости"></span>Новости</a>
+                <a href="/pages/news.php"><span data-text="Новости"></span>Новости</a>
             </li>
             <li class="headerMenu__item">
                 <a href="/pages/contacts.php"><span data-text="Контакты"></span>Контакты</a>

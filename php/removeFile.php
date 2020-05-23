@@ -10,7 +10,7 @@
 
     $sql = "DELETE FROM `files` WHERE `id` = $id";
     
-    if (unlink('../pages/disciplines/disciplines-files/'. $fileName)) {
+    if (unlink('../pages/disciplines-files/'. $fileName)) {
         $mysqli->query($sql);
     }
 

@@ -10,5 +10,5 @@
 
     $mysqli->query($sql);
 
-    header("Location: ../pages/news/news.php");
+    header("Location: ../pages/news.php");
 ?>

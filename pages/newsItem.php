@@ -15,7 +15,7 @@
         $row = $result->fetch_assoc();
 
         $title = $row['title'];
-        require_once '../../templates/head.php';
+        require_once '../templates/head.php';
     ?>
     <style>
         .header {
@@ -26,9 +26,25 @@
     </style>
 </head>
 <body>
+    <div class="modal" id="modal">
+        <div class="modal-content">
+            <div class="form-wrapper" id="form-wrapper">
+                <form name="editNews" method="post" action="../../php/editNews.php?id=<?php echo $row['id']?>" class="form">
+                    <label for="title">Заголовок</label>
+                    <input type="text" name="editTitle" id="title" value="<?php echo $row['title']?>">
+                    <label for="text">Текст новости</label>
+                    <textarea name="editText" id="editText" cols="10" rows="1"><?php echo $row['text']?></textarea>
+                    <input name="edit" type="submit" id="add" value="Обновить">
+                </form>
+                <div class="closeForm" id="closeForm">
+                    <img src="../../img/icons/close.png" alt="Закрыть форму">
+                </div>
+            </div>
+        </div>
+    </div>    
     <header class="header header_big">
         <?php
-            require_once '../../templates/header-top.php';
+            require_once '../templates/header-top.php';
         ?>
         <div class="header-main">
             <div class="header-main__info">
@@ -60,24 +76,12 @@
                     <a class="btn" id="removeNews" href="../../php/removeNews.php?id=<?php echo $row['id']?>">
                         Удалить новость
                     </a>
-                    <div class="form-wrapper" id="form-wrapper">
-                        <form name="editNews" method="post" action="../../php/editNews.php?id=<?php echo $row['id']?>" class="form">
-                            <label for="title">Заголовок</label>
-                            <input type="text" name="editTitle" id="title" value="<?php echo $row['title']?>">
-                            <label for="text">Текст новости</label>
-                            <textarea name="editText" id="editText" cols="10" rows="1"><?php echo $row['text']?></textarea>
-                            <input name="edit" type="submit" id="add" value="Обновить">
-                        </form>
-                        <div class="closeForm" id="closeForm">
-                            <img src="../../img/icons/close.png" alt="Закрыть форму">
-                        </div>
-                    </div>
                 </div>
             </div>
         </section>
     </main>
     <?php
-        require_once '../../templates/footer.php';
+        require_once '../templates/footer.php';
     ?>
 </body>
 </html>
