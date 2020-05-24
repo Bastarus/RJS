@@ -78,49 +78,54 @@
                 </div>
                 <div class="files">
                     <?php
-                        $sql = "SELECT * FROM `categories`";
-                        $result = $mysqli->query($sql);
+                        require_once '../php/user/check.php';
+                        if(count($hash) > 0) {
+                            $sql = "SELECT * FROM `categories`";
+                            $result = $mysqli->query($sql);
 
-                        while ($row = $result->fetch_assoc()) {
-                            $category = $row['category'];
-                            echo '<div class="files-category">
-                                <div class="openFilesList">
-                                    <h2 class="section__title">'. $row['category'] .'</h2>
-                                    <div><img src="../img/icons/down-arrow.png"></div>
-                                </div>    
-                                <div class="files-wrapper">';    
-                            $sqlFileGet = "SELECT * FROM `files` WHERE `category` = '$category' AND `discipline` = '$title'";
-                            $files = $mysqli->query($sqlFileGet);
-    
-                            while ($rowFiles = $files->fetch_assoc()) {
-                                echo '<div class="files-block">
-                                        <div class="files-info">
-                                            <a href="disciplines-files/'. $rowFiles['name'] .'" title="'. $rowFiles['name'] .'">
-                                                <div class="files-item">
-                                                    <div class="files__icon">
-                                                        <img src="../../img/icons/download-icon.png" alt="Иконка загрузки">
+                            while ($row = $result->fetch_assoc()) {
+                                $category = $row['category'];
+                                echo '<div class="files-category">
+                                    <div class="openFilesList">
+                                        <h2 class="section__title">'. $row['category'] .'</h2>
+                                        <div><img src="../img/icons/down-arrow.png"></div>
+                                    </div>    
+                                    <div class="files-wrapper">';    
+                                $sqlFileGet = "SELECT * FROM `files` WHERE `category` = '$category' AND `discipline` = '$title'";
+                                $files = $mysqli->query($sqlFileGet);
+        
+                                while ($rowFiles = $files->fetch_assoc()) {
+                                    echo '<div class="files-block">
+                                            <div class="files-info">
+                                                <a href="disciplines-files/'. $rowFiles['name'] .'" title="'. $rowFiles['name'] .'">
+                                                    <div class="files-item">
+                                                        <div class="files__icon">
+                                                            <img src="../../img/icons/download-icon.png" alt="Иконка загрузки">
+                                                        </div>
+                                                        <div class="files-text">
+                                                            <h2 class="files__title">
+                                                                '. $rowFiles['name'] .'
+                                                            </h2>
+                                                            <p class="files__text">
+                                                                '. $rowFiles['discipline'] .'
+                                                            </p>
+                                                            <p class="files__date">
+                                                                '. $rowFiles['date'] .'
+                                                            </p>
+                                                        </div>
                                                     </div>
-                                                    <div class="files-text">
-                                                        <h2 class="files__title">
-                                                            '. $rowFiles['name'] .'
-                                                        </h2>
-                                                        <p class="files__text">
-                                                            '. $rowFiles['discipline'] .'
-                                                        </p>
-                                                        <p class="files__date">
-                                                            '. $rowFiles['date'] .'
-                                                        </p>
-                                                    </div>
-                                                </div>
+                                                </a>
+                                            </div>
+                                            <a class="delete-file" href="/php/removeFile.php?id='. $rowFiles['id']. '">
+                                                <p>Удалить</p>
                                             </a>
-                                        </div>
-                                        <a class="delete-file" href="/php/removeFile.php?id='. $rowFiles['id']. '">
-                                            <p>Удалить</p>
-                                        </a>
-                                    </div>';
-                            }  
-                            
-                            echo '</div></div>';
+                                        </div>';
+                                }  
+                                
+                                echo '</div></div>';
+                            }
+                        } else {
+                            echo 'Просматривать и скачивать файлы могут только авторизованные пользователи.';
                         }
                     ?>
                 </div>

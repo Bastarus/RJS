@@ -22,8 +22,8 @@
                 <a href="/pages/contacts.php"><span data-text="Контакты"></span>Контакты</a>
             </li>
             <li class="headerMenu__item user-menu__btn">
-                <img src="/img/icons/user-icon.png" alt="Иконка пользователя" class="user-menu__btn_desktop">
-                <a href="" class="user-menu__btn_mobile"><span data-text="Вход/Регистрация"></span>Вход/Регистрация</a>
+                <a href="/pages/user.php" class="user-menu__btn_desktop"><img src="/img/icons/user-icon.png" alt="Иконка пользователя"></a>
+                <a href="/pages/user.php" class="user-menu__btn_mobile"><span data-text="Вход/Регистрация"></span>Вход/Регистрация</a>
             </li>
         </ul>
     </nav>

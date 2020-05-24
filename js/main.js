@@ -60,3 +60,19 @@ for(let i = 0; i < openFileList.length; i++) {
     openFileList[i].parentNode.classList.toggle('files-category_active');
   })
 }
+
+let formReg = document.querySelector('#form-reg');
+let formAuth = document.querySelector('#form-auth');
+let openAuth = document.querySelector('#openAuth');
+let openReg = document.querySelector('#openReg');
+
+
+
+setEventListener(openReg, function() {
+  formAuth.classList.toggle('form_hidden');
+  formReg.classList.remove('form_hidden');
+});
+setEventListener(openAuth, function() {
+  formReg.classList.toggle('form_hidden');
+  formAuth.classList.remove('form_hidden');
+});

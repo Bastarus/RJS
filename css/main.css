@@ -355,6 +355,7 @@ body {
     width: 90%;
 }
 .form-wrapper {
+    margin: 0 auto;
     max-width: 300px;
     position: relative;
 }
@@ -364,6 +365,9 @@ body {
     display: flex;
     flex-direction: column;
     padding: 30px;
+}
+.form_hidden {
+    display: none;
 }
 .form>input, .form>textarea, .form>select {
     background: none;
