@@ -117,9 +117,10 @@
                                         <a class="delete-file" href="/php/removeFile.php?id='. $rowFiles['id']. '">
                                             <p>Удалить</p>
                                         </a>
-                                    </div>
-                                </div></div>';
-                            }   
+                                    </div>';
+                            }  
+                            
+                            echo '</div></div>';
                         }
                     ?>
                 </div>
