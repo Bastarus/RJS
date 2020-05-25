@@ -7,7 +7,6 @@
     ?>
 </head>
 <body>
-    <a href="php/user/exit.php">111111</a>
     <header class="header header_big">
         <?php
             require_once 'templates/header-top.php';

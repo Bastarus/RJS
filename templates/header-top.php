@@ -22,8 +22,21 @@
                 <a href="/pages/contacts.php"><span data-text="Контакты"></span>Контакты</a>
             </li>
             <li class="headerMenu__item user-menu__btn">
-                <a href="/pages/user.php" class="user-menu__btn_desktop"><img src="/img/icons/user-icon.png" alt="Иконка пользователя"></a>
-                <a href="/pages/user.php" class="user-menu__btn_mobile"><span data-text="Вход/Регистрация"></span>Вход/Регистрация</a>
+                <?php
+                    require_once 'E:/Projects/RJS/php/user/check.php';
+
+                    if(checkUser($user)) {
+                        echo '
+                        <a href="/php/user/exit.php" class="user-menu__btn_desktop"><img src="/img/icons/close.png" alt="Иконка выхода" title="Выход"></a>
+                        <a href="/php/user/exit.php" class="user-menu__btn_mobile">Выход</a>
+                        ';
+                    } else {
+                        echo '
+                            <a href="/pages/user.php" class="user-menu__btn_desktop"><img src="/img/icons/user-icon.png" alt="Иконка пользователя"></a>
+                            <a href="/pages/user.php" class="user-menu__btn_mobile"><span data-text="Вход/Регистрация"></span>Вход/Регистрация</a>
+                        ';
+                    }
+                ?>
             </li>
         </ul>
     </nav>
