@@ -35,5 +35,5 @@
         $mysqli->query($sql);
     }
     
-    header("Location: ../pages/discipline.php?id=$id");
+    header("Location: ".$_SERVER["HTTP_REFERER"]);
 ?>

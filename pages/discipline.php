@@ -104,7 +104,7 @@
                                 while ($rowFiles = $files->fetch_assoc()) {
                                     echo '<div class="files-block">
                                             <div class="files-info">
-                                                <a href="disciplines-files/'. $rowFiles['name'] .'" title="'. $rowFiles['name'] .'">
+                                                <a href="https://docs.google.com/viewer?url=disciplines-files/'. $rowFiles['name'] .'" title="'. $rowFiles['name'] .'">
                                                     <div class="files-item">
                                                         <div class="files__icon">
                                                             <img src="../../img/icons/download-icon.png" alt="Иконка загрузки">

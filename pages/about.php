@@ -93,45 +93,6 @@
                 </div>
             </div>
         </section>
-        <section class="section">
-            <div class="section__main">
-                <div class="progress">
-                    <div class="progress-card">
-                        <div class="progress__img">
-                            <img src="../img/icons/about/about-card1__img.png" alt="Преподаватель">
-                        </div>
-                        <h3 class="progress__title" id="progress__title1">
-                            8
-                        </h3>
-                        <p class="progress__text">
-                            Преподаваемых дисциплин
-                        </p>
-                    </div>
-                    <div class="progress-card">
-                        <div class="progress__img">
-                            <img src="../img/icons/about/about-card2__img.png" alt="Студент">
-                        </div>
-                        <h3 class="progress__title progress__title2">
-                            2000+
-                        </h3>
-                        <p class="progress__text">
-                            Выпущенных студентов
-                        </p>
-                    </div>
-                    <div class="progress-card">
-                        <div class="progress__img">
-                            <img src="../img/icons/about/about-card3__img.png" alt="Научная работа">
-                        </div>
-                        <h3 class="progress__title progress__title3">
-                            12
-                        </h3>
-                        <p class="progress__text">
-                            Научных работ
-                        </p>
-                    </div>
-                </div>
-            </div>
-        </section>
         <section class="section section_black">
             <div class="section__main">
                 <div class="section__info">

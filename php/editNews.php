@@ -10,5 +10,5 @@
 
     $mysqli->query($sql);
 
-    header("Location: ../pages/news.php");
+    header("Location: ".$_SERVER["HTTP_REFERER"]);
 ?>

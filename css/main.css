@@ -424,6 +424,26 @@ body {
 .news__buttons>.btn {
     margin-bottom: 10px;
 }
+.comment {
+    border: 1px solid #fff;
+    display: flex;
+    font-size: 1.2rem;
+    margin: 10px 0;
+    padding: 10px;
+}
+.comment-content {
+    width: 100%;
+}
+.comment-info {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 10px;
+}
+.comment-img {
+    margin-right: 10px;
+    max-width: 50px;
+}
+
 .modal {
     background-color: rgba(0, 0, 0, 0.8);
     height: 100vh;
@@ -459,8 +479,10 @@ body {
 }
 .form-wrapper {
     margin: 0 auto;
-    max-width: 300px;
     position: relative;
+}
+.form-wrapper_small {
+    max-width: 300px;
 }
 .form {
     background: #131211;

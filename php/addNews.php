@@ -24,5 +24,5 @@
     move_uploaded_file($_FILES['file']['tmp_name'], $uploadfile);
     $mysqli->query($sql);
 
-    header("Location: ../pages/news.php");
+    header("Location: ".$_SERVER["HTTP_REFERER"]);
 ?>
