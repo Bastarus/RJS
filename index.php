@@ -27,7 +27,7 @@
                 </button>
             </div>
             <div class="header-main__img">
-                <img src="img/header-img/header__img.png" alt="Фото">
+                <img src="img/header-img/header__img.png" alt="Взаимодействие с преподаватедем с помощью ПК">
             </div>
         </div>
     </header>
@@ -35,7 +35,7 @@
         <section class="section section_bg-lines section_withBB" id="firstSection">
             <div class="section__main section__main_row">
                 <div class="section__img desktop">
-                    <img src="img/section1__img.png" alt="Фото">
+                    <img src="img/icons/teacher-icon.png" alt="Преподаватель - иконка">
                 </div>
                 <div class="black-block">
                     <div class="section__info">
@@ -54,12 +54,13 @@
                         </div>
                         <div class="section__text">
                             <p>
-                                Voluptate proident ex velit ut duis tempor occaecat sit voluptate incididunt ullamco 
-                                dolor. Excepteur nostrud eu cupidatat cillum nisi nisi do duis laborum labore 
-                                veniam deserunt deserunt dolor. Duis ullamco nisi incididunt sunt consectetur elit 
-                                tempor proident sunt. Deserunt fugiat occaecat ea ipsum consequat. 
-                                Enim enim tempor cillum ea nisi est tempor adipisicing ut minim elit et ullamco velit. 
-                                Minim duis ex amet aliqua aute ea velit veniam cupidatat.
+                                <span class="yellow">Должность:</span> доцент
+                            </p>
+                            <p>
+                                <span class="yellow">Ученая степень:</span> кандидат экономических наук 
+                                (присуждена по специальности 08.00.05 – Экономика и управление народным хозяйством: 
+                                экономика, организация и управление предприятиями, отраслями, комплексами 
+                                (промышленность)
                             </p>
                         </div>
                         <a href="pages/about.php" class="btn">
@@ -90,13 +91,25 @@
                 <div class="disciplines">
                     <div class="disciplines__cards">
                         <div class="disciplines__card">
+                            <a href="pages/discipline.php?id=3">
+                                <div class="disciplines__card_front">
+                                    <div class="disciplines__img">
+                                        <img src="img/icons/disp/disp3-card__img.png" alt="Логистика - иконка">
+                                    </div>
+                                    <h3 class="disciplines__title">
+                                        Логистика
+                                    </h3>
+                                </div>
+                            </a>
+                        </div>
+                        <div class="disciplines__card">
                             <a href="pages/discipline.php?id=1">
                                 <div class="disciplines__card_front">
                                     <div class="disciplines__img">
                                         <img src="img/icons/disp/disp1-card__img.png" alt="Экономика отрасли - иконка">
                                     </div>
                                     <h3 class="disciplines__title">
-                                        Экономика отрасли
+                                        Финансовый менежмент
                                     </h3>
                                 </div>
                             </a>
@@ -109,18 +122,6 @@
                                     </div>
                                     <h3 class="disciplines__title">
                                         Деньги.Кредит.Банки
-                                    </h3>
-                                </div>
-                            </a>
-                        </div>
-                        <div class="disciplines__card">
-                            <a href="pages/discipline.php?id=3">
-                                <div class="disciplines__card_front">
-                                    <div class="disciplines__img">
-                                        <img src="img/icons/disp/disp3-card__img.png" alt="Логистика - иконка">
-                                    </div>
-                                    <h3 class="disciplines__title">
-                                        Логистика
                                     </h3>
                                 </div>
                             </a>

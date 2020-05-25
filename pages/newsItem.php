@@ -26,22 +26,30 @@
     </style>
 </head>
 <body>
-    <div class="modal" id="modal">
-        <div class="modal-content">
-            <div class="form-wrapper" id="form-wrapper">
-                <form name="editNews" method="post" action="../../php/editNews.php?id=<?php echo $row['id']?>" class="form">
-                    <label for="title">Заголовок</label>
-                    <input type="text" name="editTitle" id="title" value="<?php echo $row['title']?>">
-                    <label for="text">Текст новости</label>
-                    <textarea name="editText" id="editText" cols="10" rows="1"><?php echo $row['text']?></textarea>
-                    <input name="edit" type="submit" id="add" value="Обновить">
-                </form>
-                <div class="closeForm" id="closeForm">
-                    <img src="../../img/icons/close.png" alt="Закрыть форму">
+    <?php
+        require_once '../php/user/check.php';
+
+        if(checkAdmin($user)) {
+            echo '
+            <div class="modal" id="modal">
+                <div class="modal-content">
+                    <div class="form-wrapper" id="form-wrapper">
+                        <form name="editNews" method="post" action="../../php/editNews.php?id='.$row['id'].'" class="form">
+                            <label for="title">Заголовок</label>
+                            <input type="text" name="editTitle" id="title" value="'.$row['title'].'">
+                            <label for="text">Текст новости</label>
+                            <textarea name="editText" id="editText" cols="10" rows="1">'.$row['text'].'</textarea>
+                            <input name="edit" type="submit" id="add" value="Обновить">
+                        </form>
+                        <div class="closeForm" id="closeForm">
+                            <img src="../../img/icons/close.png" alt="Закрыть форму">
+                        </div>
+                    </div>
                 </div>
-            </div>
-        </div>
-    </div>    
+            </div> 
+            ';
+        }
+    ?>   
     <header class="header header_big">
         <?php
             require_once '../templates/header-top.php';
@@ -69,14 +77,20 @@
                         </p>
                     </div>
                 </div>
-                <div class="news__buttons">
-                    <div class="btn" id="openForm">
-                        Редактировать
-                    </div>
-                    <a class="btn" id="removeNews" href="../../php/removeNews.php?id=<?php echo $row['id']?>">
-                        Удалить новость
-                    </a>
-                </div>
+                <?php
+                    if(checkAdmin($user)) {
+                        echo '
+                        <div class="news__buttons">
+                            <div class="btn" id="openForm">
+                                Редактировать
+                            </div>
+                            <a class="btn" id="removeNews" href="../../php/removeNews.php?id='.$row['id'].'">
+                                Удалить новость
+                            </a>
+                        </div>
+                        ';
+                    }
+                ?>
             </div>
         </section>
     </main>

@@ -71,15 +71,22 @@
     <main>
         <section class="section section_black" id="firstSection" id="firstSection">
             <div class="section__main">
-                <div class="files__buttons">
-                    <div class="btn" id="openForm">
-                        Загрузить файл
-                    </div>
-                </div>
+                <?php
+                    require_once '../php/user/check.php';
+
+                    if(checkAdmin($user)) {
+                        echo '
+                        <div class="files__buttons">
+                            <div class="btn" id="openForm">
+                                Загрузить файл
+                            </div>
+                        </div>
+                        ';
+                    }
+                ?>
                 <div class="files">
                     <?php
-                        require_once '../php/user/check.php';
-                        if(count($hash) > 0) {
+                        if(checkUser($user)) {
                             $sql = "SELECT * FROM `categories`";
                             $result = $mysqli->query($sql);
 
@@ -125,7 +132,7 @@
                                 echo '</div></div>';
                             }
                         } else {
-                            echo 'Просматривать и скачивать файлы могут только авторизованные пользователи.';
+                            echo 'Для просмотра и скачивания файлов необходимо <a href="user.php"><span class="yellow">авторизироваться</span></a>';
                         }
                     ?>
                 </div>

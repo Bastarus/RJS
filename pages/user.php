@@ -2,7 +2,7 @@
 <html lang="ru">
 <head>
     <?php
-        $title = 'Регистрация';
+        $title = 'Авторизация';
         require_once '../templates/head.php';
     ?>
 </head>

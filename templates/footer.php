@@ -33,18 +33,18 @@
                     Файлы
             </li>
             <li class="footer__item">
+                <a href="/pages/discipline.php?id=3">
+                    Логистика
+                </a>
+            </li>
+            <li class="footer__item">
                 <a href="/pages/discipline.php?id=1">
-                    Экономика отрасли
+                    Финансовый менеджмент
                 </a>
             </li>
             <li class="footer__item">
                 <a href="/pages/discipline.php?id=2">
                     Деньги.Кредит.Банки
-                </a>
-            </li>
-            <li class="footer__item">
-                <a href="/pages/discipline.php?id=3">
-                    Логистика
                 </a>
             </li>
             <li class="footer__item">

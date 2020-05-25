@@ -38,30 +38,48 @@
                         </p>
                     </div>
                     <div class="section__img mobile">
-                    <a href="../img/Rectangle 30.png"><img src="../img/Rectangle 30.png" alt="Мое фото"></a>
+                        <a href="../img/Rectangle 30.png"><img src="../img/photos/about-photo.jpg" alt="Мое фото"></a>
                     </div>
                     <div class="section__text">
                         <p>
-                            Voluptate proident ex velit ut duis tempor occaecat sit voluptate incididunt 
-                            ullamco dolor. Excepteur nostrud eu cupidatat cillum nisi nisi do duis laborum 
-                            labore veniam deserunt deserunt dolor. 
+                            <span class="yellow">Должность:</span> доцент
                         </p>
                         <p>
-                            Duis ullamco nisi incididunt sunt consectetur elit tempor proident sunt. 
-                            Deserunt fugiat occaecat ea ipsum consequat. Enim enim tempor cillum ea nisi est 
-                            tempor adipisicing ut minim elit et ullamco velit. Minim duis ex amet aliqua aute 
-                            ea velit veniam cupidatat. 
+                            <span class="yellow">Ученая степень:</span> кандидат экономических наук 
+                            (присуждена по специальности 08.00.05 – Экономика и управление народным хозяйством: 
+                            экономика, организация и управление предприятиями, отраслями, комплексами 
+                            (промышленность)
                         </p>
                         <p>
-                            Voluptate proident ex velit ut duis tempor occaecat sit voluptate incididunt 
-                            ullamco dolor. Excepteur nostrud eu cupidatat cillum nisi nisi do duis laborum 
-                            labore veniam deserunt deserunt dolor.  
+                            <span class="yellow">Специальность:</span> экономика и управление на предприятии 
+                            (квалификация – экономист-менеджер), юриспруденция (квалификация – юрист)  
                         </p>
                         <p>
-                            Duis ullamco nisi incididunt sunt consectetur elit tempor proident sunt. 
-                            Deserunt fugiat occaecat ea ipsum consequat. Enim enim tempor cillum ea nisi est 
-                            tempor adipisicing ut minim elit et ullamco velit. Minim duis ex amet aliqua aute 
-                            ea velit veniam cupidatat. 
+                            <span class="yellow">Преподаваемые дисциплины:</span>
+                            - <a href="/pages/discipline.php?id=3">
+                                Логистика, 
+                            </a>
+                            <a href="/pages/discipline.php?id=1">
+                                Финансовый менеджмент, 
+                            </a>
+                            <a href="/pages/discipline.php?id=2">
+                                Деньги.Кредит.Банки, 
+                            </a>
+                            <a href="/pages/discipline.php?id=4">
+                                Правоведение, 
+                            </a>
+                            <a href="/pages/discipline.php?id=5">
+                                Рынок ценных бумаг, 
+                            </a>
+                            <a href="/pages/discipline.php?id=6">
+                                Теория отраслевых рынков, 
+                            </a>
+                            <a href="/pages/discipline.php?id=7">
+                                Экономика недвижимости, 
+                            </a>
+                            <a href="/pages/discipline.php?id=8">
+                                Производственная практика.
+                            </a>
                         </p>
                     </div>
                     <div class="soc">
@@ -71,7 +89,7 @@
                     </div>
                 </div>
                 <div class="section__img desktop">
-                    <a href="../img/Rectangle 30.png"><img src="../img/Rectangle 30.png" alt="Мое фото"></a>
+                    <img src="../img/photos/about-photo.jpg" alt="Мое фото" width="80%">
                 </div>
             </div>
         </section>
@@ -83,7 +101,7 @@
                             <img src="../img/icons/about/about-card1__img.png" alt="Преподаватель">
                         </div>
                         <h3 class="progress__title" id="progress__title1">
-                            12
+                            8
                         </h3>
                         <p class="progress__text">
                             Преподаваемых дисциплин
@@ -119,23 +137,19 @@
                 <div class="section__info">
                     <div class="section__title-block">
                         <h2 class="section__title">
-                            Образование
+                            Повышение квалификации и (или) профессиональная переподготовка:
                         </h2>
                     </div>
-                    <p class="section__text">
-                        Voluptate proident ex velit ut duis tempor occaecat sit voluptate incididunt 
-                        ullamco dolor. Excepteur nostrud eu cupidatat cillum nisi nisi do duis laborum 
-                        labore veniam deserunt deserunt dolor. 
-                    </p>
-                    <p class="section__text">
-                        Duis ullamco nisi incididunt sunt consectetur elit tempor proident sunt. 
-                        Deserunt fugiat occaecat ea ipsum consequat. Enim enim tempor cillum ea nisi 
-                        est tempor adipisicing ut minim elit et ullamco velit. Minim duis ex amet aliqua 
-                        aute ea velit veniam cupidatat.
-                    </p>
-                </div>
-                <div class="section__img">
-                    <a href="../img/Sertifikat-obrazets-1024x639.jpg"><img src="../img/Sertifikat-obrazets-1024x639.jpg" alt="Сертификат"></a>
+                    <div class="section__text">
+                        <p>2013 г. «Управление персоналом»;</p>
+                        <p>2013 г. «Мультимедиа технологии в совершенствовании учебного процесса»;</p>
+                        <p>2013 г. «Современные методы менеджмента качества и опыт внедрения систем менеджмента качества в образовательных учреждениях»;</p>
+                        <p>2014 г. «Производственная система Росатом (Система 5С: офис);</p>
+                        <p>2015 г. «Информационные технологии в планировании учебного процесса с учетом изменений ФГОС ВПО»;</p>
+                        <p>2015 г. Обучение в ДГТУ г. Шахты  по программе «Информационные технологии в планировании учебного процесса с учетом изменений ФГОС ВПО»;</p>
+                        <p>2017-2018гг. Программа переподготовки «Психолого-педагогические основы преподавательской деятельности»;</p>
+                        <p>2017-2018гг. «Технический английский в подготовке инженерных кадров для глобальной экспансии ГК Росатом».</p>
+                    </div>
                 </div>
             </div>
         </section>
