@@ -11,30 +11,20 @@
         <?php
             require_once '../templates/header-top.php';
         ?>
-        <div class="header-main">
-            <div class="header-main__info">
-                <h1 class="header-main__title">
-                    Обо мне
-                </h1>
-                <button class="btn header-btn">
-                    Вперед
-                </button>
-            </div>
-            <div class="header-main__img">
-                <img src="../img/header-img/about-img.png" alt="Обо мне">
-            </div>
-        </div>
     </header>
     <main>
-        <section class="section section_black" id="firstSection">
+        <section class="section section_black">
             <div class="section__main section__main_row">
                 <div class="section__info">
+                    <h1 class="page__title">
+                        Обо мне
+                    </h1>
                     <div class="section__title-block">
                         <h2 class="section__title">
                             Рогачева Жанна
                         </h2>
                         <p class="section__text">
-                            Преподаватель
+                            <span class="blue_dark">Преподаватель</span>
                         </p>
                     </div>
                     <div class="section__img mobile">
@@ -42,21 +32,21 @@
                     </div>
                     <div class="section__text">
                         <p>
-                            <span class="yellow">Должность:</span> доцент
+                            <span class="blue_dark bold">Должность:</span> доцент
                         </p>
                         <p>
-                            <span class="yellow">Ученая степень:</span> кандидат экономических наук 
+                            <span class="blue_dark bold">Ученая степень:</span> кандидат экономических наук 
                             (присуждена по специальности 08.00.05 – Экономика и управление народным хозяйством: 
                             экономика, организация и управление предприятиями, отраслями, комплексами 
                             (промышленность)
                         </p>
                         <p>
-                            <span class="yellow">Специальность:</span> экономика и управление на предприятии 
+                            <span class="blue_dark bold">Специальность:</span> экономика и управление на предприятии 
                             (квалификация – экономист-менеджер), юриспруденция (квалификация – юрист)  
                         </p>
                         <p>
-                            <span class="yellow">Преподаваемые дисциплины:</span>
-                            - <a href="/pages/discipline.php?id=3">
+                            <span class="blue_dark bold">Преподаваемые дисциплины:</span>
+                            <a href="/pages/discipline.php?id=3">
                                 Логистика, 
                             </a>
                             <a href="/pages/discipline.php?id=1">

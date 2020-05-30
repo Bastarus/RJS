@@ -39,7 +39,7 @@
                             <input type="text" name="editTitle" id="title" value="'.$row['title'].'">
                             <label for="text">Текст новости</label>
                             <textarea name="editText" id="editText" cols="10" rows="1">'.$row['text'].'</textarea>
-                            <input name="edit" type="submit" id="add" value="Обновить">
+                            <input name="edit" class="submit" type="submit" id="add" value="Обновить">
                         </form>
                         <div class="closeForm" id="closeForm">
                             <img src="../../img/icons/close.png" alt="Закрыть форму">
@@ -54,21 +54,14 @@
         <?php
             require_once '../templates/header-top.php';
         ?>
-        <div class="header-main">
-            <div class="header-main__info">
-                <h1 class="header-main__title">
-                   <?=$row['title']?>
-                </h1>
-                <button class="btn header-btn">
-                    Вперед
-                </button>
-            </div>
-        </div>
     </header>
     <main>
         <section class="section section_black" id="firstSection">
             <div class="section__main">
                 <div class="section__info">
+                    <h1 class="page__title">
+                    <?=$row['title']?>
+                    </h1>
                     <div class="section__text newsItem__text">
                         <p>
                             <?php
@@ -112,7 +105,8 @@
                                     <textarea name="comment" id="comment" cols="30" rows="10"></textarea>
                                     <input type="hidden" name="page_id" id="page_id" value="'.$id.'">
                                     <input type="hidden" name="login" id="login" value="'.$_COOKIE['login'].'">
-                                    <input type="submit" value="Добавить комментарий">
+                                    <input type="hidden" name="avatar" id="avatar" value="'.$user['avatar'].'">
+                                    <input type="submit" class="submit" value="Добавить комментарий">
                                 </form>
                             </div>
                             ';
@@ -128,8 +122,7 @@
                             while($comment = $resultComments->fetch_assoc()) {
                                 echo '
                                     <div class="comment">
-                                        <div class="comment-img">
-                                            <img src="../img/icons/user-icon.png">
+                                        <div class="comment-img" style="background-image: url(../img/user-avatars/'.$comment['avatar'].')">
                                         </div>
                                         <div class="comment-content">
                                             <div class="comment-info">

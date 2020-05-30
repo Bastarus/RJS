@@ -22,7 +22,7 @@
                             <textarea name="text" id="text" cols="10" rows="1" required></textarea>
                             <input type="hidden" name="MAX_FILE_SIZE" value="10000000">
                             <input type="file" name="file" id="file">
-                            <input name="add" type="submit" id="add" value="Добавить">
+                            <input name="add" class="submit" type="submit" id="add" value="Добавить">
                         </form>
                         <div class="closeForm" id="closeForm">
                             <img src="../../img/icons/close.png" alt="Закрыть форму">
@@ -37,45 +37,38 @@
         <?php
             require_once '../templates/header-top.php';
         ?>
-        <div class="header-main">
-            <div class="header-main__info">
-                <h1 class="header-main__title">
-                    Новости
-                </h1>
-                <button class="btn header-btn">
-                    Вперед
-                </button>
-            </div>
-            <div class="header-main__img">
-                <img src="../../img/header-img/news-img.png" alt="Новости">
-            </div>
-        </div>
     </header>
     <main>
-        <section class="section section_black" id="firstSection">
+        <section class="section section_black">
             <div class="section__main">
+                <h1 class="page__title">
+                    Новости
+                </h1>
                 <div class="news">
-                <?php
-                    require_once '../php/connectDB.php';
-
-                    $result = $mysqli->query("SELECT * FROM `news` WHERE 1 ORDER BY `id` DESC");
-                    while ($row = $result->fetch_assoc()) {
-                        echo '<a href="newsItem.php?id='. $row['id'] .'">
-                                <div class="news__item" style="background: linear-gradient(0deg, rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url(news-files/'. $row['file'] .'); background-position: center; background-size: cover;">
-                                    <p class="news__date section__text">
-                                        '. $row['date'] .'
-                                    </p>
-                                    <div class="news__line"></div>
-                                    <h3 class="news__title section__subtitle">
-                                        '. $row['title'] .'
-                                    </h3>
-                                    <p class="news__text_">
-                                        '. mb_strimwidth($row['text'], 0, 100) . '...' . '
-                                    </p>
-                                </div>
-                            </a>';
-                    }
-                ?>
+                    <?php
+                        $result = $mysqli->query("SELECT * FROM `news` WHERE 1 ORDER BY `id` DESC LIMIT 10");
+                        while ($row = $result->fetch_assoc()) {
+                            echo '<div class="news-item">
+                                    <div class="news__img" style="background-image: url(news-files/'.$row['file'].')">
+                                    </div>
+                                    <div class="news__info">
+                                        <div class="news__date">
+                                            <div><img src="../img/icons/calendar.png"></div>
+                                            <p>'.$row['date'].'</p>
+                                        </div>
+                                        <h3 class="news__title">
+                                            '.$row['title'].'
+                                        </h3>
+                                        <p class="news__text">
+                                            '.substr($row['text'], 0, 30).'...
+                                        </p>
+                                        <div class="btn-wrapper">
+                                            <a href="newsItem.php?id='.$row['id'].'" class="btn">Читать далее</a>
+                                        </div>
+                                    </div>
+                                </div>';
+                        }
+                    ?>
                 </div>
                 <?php
                     if(checkAdmin($user)) {

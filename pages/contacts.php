@@ -11,24 +11,14 @@
         <?php
             require_once '../templates/header-top.php';
         ?>
-        <div class="header-main">
-            <div class="header-main__info">
-                <h1 class="header-main__title">
-                    Контакты
-                </h1>
-                <button class="btn header-btn">
-                    Вперед
-                </button>
-            </div>
-            <div class="header-main__img">
-                <img src="../img/header-img/contacts-img.png" alt="Контакты">
-            </div>
-        </div>
     </header>
     <main>
         <section class="section section_contacts section_black" id="firstSection">
             <div class="section__main">
                 <div class="section__info contacts">
+                    <h1 class="page__title">
+                        Контакты
+                    </h1>
                     <div class="section__text">
                         <h2 class="contact__title">
                             <span class="yellow">Рабочий телефон</span>
@@ -76,7 +66,7 @@
                                 <input type="text" name="title" id="title">
                                 <label for="message">Ваше сообщение</label>
                                 <textarea name="message" id="message" cols="30" rows="5" required></textarea>
-                                <input type="submit" value="Отправить">
+                                <input type="submit" class="submit" value="Отправить">
                             </form>
                         </div>
                     </div>

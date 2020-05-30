@@ -15,6 +15,14 @@
     ?>
 </head>
 <body>
+    <?php
+        require_once '../php/user/check.php';
+        if(checkAdmin($user)) {
+            echo '
+                
+            ';
+        }
+    ?>
     <div class="modal" id="modal">
         <div class="modal-content">
             <div class="form-wrapper" id="form-wrapper">
@@ -45,7 +53,7 @@
                     </select>
                     <input type="file" name="file" id="file" required>
                     <input type="hidden" name="id" value="<?=$id?>" id="id">
-                    <input name="add" type="submit" id="add" value="Загрузить">
+                    <input name="add" type="submit" class="submit" id="add" value="Загрузить">
                 </form>
                 <div class="closeForm" id="closeForm">
                     <img src="../img/icons/close.png" alt="Закрыть форму">
@@ -57,23 +65,14 @@
         <?php
             require_once '../templates/header-top.php';
         ?>
-        <div class="header-main">
-            <div class="header-main__info">
-                <h1 class="header-main__title">
-                    <?=$title?>
-                </h1>
-                <button class="btn header-btn">
-                    Вперед
-                </button>
-            </div>
-        </div>
     </header>
     <main>
         <section class="section section_black" id="firstSection" id="firstSection">
             <div class="section__main">
+                <h1 class="page__title discipline__title">
+                    <?=$title?>
+                </h1>
                 <?php
-                    require_once '../php/user/check.php';
-
                     if(checkAdmin($user)) {
                         echo '
                         <div class="files__buttons">

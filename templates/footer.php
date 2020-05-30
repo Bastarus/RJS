@@ -33,17 +33,17 @@
                     Файлы
             </li>
             <li class="footer__item">
-                <a href="/pages/discipline.php?id=3">
+                <a href="/pages/discipline.php?id=1">
                     Логистика
                 </a>
             </li>
             <li class="footer__item">
-                <a href="/pages/discipline.php?id=1">
+                <a href="/pages/discipline.php?id=2">
                     Финансовый менеджмент
                 </a>
             </li>
             <li class="footer__item">
-                <a href="/pages/discipline.php?id=2">
+                <a href="/pages/discipline.php?id=3">
                     Деньги.Кредит.Банки
                 </a>
             </li>
@@ -81,3 +81,7 @@
     </nav>
 </footer>
 <script src="/js/main.js"></script>
+<script src="https://code.jquery.com/jquery-1.12.4.min.js"></script>
+<script src="/js/js.cookie.js"></script>
+<script src="/js/bvi-init.js"></script>
+<script src="/js/bvi.js"></script>

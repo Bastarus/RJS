@@ -2,6 +2,7 @@
     <a class="logo" href="/">
         <img src="/img/icons/Logo.png" alt="Логотип">
     </a>
+    <a href="#" class="bvi-open" title="Версия сайта для слабовидящих"><img src="/img/icons/eye.png" alt=""></a>
     <div class="header-top__button mobile" id ="headerButton">
         <div class="htb_t"></div>
         <div class="htb_m"></div>
@@ -10,30 +11,32 @@
     <nav class="headerMenu" id="headerMenu">
         <ul>
             <li class="headerMenu__item">
-                <a href="/"><span data-text="Главная"></span>Главная</a>
+                <a href="/">Главная</a>
             </li>
             <li class="headerMenu__item">
-                <a href="/pages/about.php"><span data-text="Обо&nbsp;мне"></span>Обо мне</a>
+                <a href="/pages/about.php">Обо мне</a>
             </li>
             <li class="headerMenu__item">
-                <a href="/pages/news.php"><span data-text="Новости"></span>Новости</a>
+                <a href="/pages/news.php">Новости</a>
             </li>
             <li class="headerMenu__item">
-                <a href="/pages/contacts.php"><span data-text="Контакты"></span>Контакты</a>
+                <a href="/pages/contacts.php">Контакты</a>
             </li>
             <li class="headerMenu__item user-menu__btn">
                 <?php
-                    require_once 'E:/Projects/RJS/php/user/check.php';
+                    require_once 'E:/Projects/RJS/php/connectDB.php';
+                    $login = $_COOKIE['login'];
+                    $sql = "SELECT * FROM `users` WHERE `login` = '$login'";
+                    $result = $mysqli->query($sql);
+                    $user = $result->fetch_assoc();
 
-                    if(checkUser($user)) {
+                    if(count($user) > 0) {
                         echo '
-                        <a href="/php/user/exit.php" class="user-menu__btn_desktop"><img src="/img/icons/close.png" alt="Иконка выхода" title="Выход"></a>
-                        <a href="/php/user/exit.php" class="user-menu__btn_mobile">Выход</a>
+                            <a href="/php/user/exit.php">Выход</a>
                         ';
                     } else {
                         echo '
-                            <a href="/pages/user.php" class="user-menu__btn_desktop"><img src="/img/icons/user-icon.png" alt="Иконка пользователя"></a>
-                            <a href="/pages/user.php" class="user-menu__btn_mobile"><span data-text="Вход/Регистрация"></span>Вход/Регистрация</a>
+                            <a href="/pages/user.php">Войти</a>
                         ';
                     }
                 ?>
