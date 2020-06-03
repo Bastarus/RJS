@@ -46,7 +46,7 @@
                             $resultDisc = $mysqli->query("SELECT * FROM `disciplines`");
                             while($discipline = $resultDisc->fetch_assoc()) {
                                 echo '
-                                <a href="pages/discipline.php?id=3" class="disciplines__card" style="background-image: url(img/icons/disp/'.$discipline['image'].')">
+                                <a href="pages/discipline.php?id='.$discipline['id'].'" class="disciplines__card" style="background-image: url(img/icons/disp/'.$discipline['image'].')">
                                     <div>
                                         <h3 class="disciplines__title">
                                             '.$discipline['name'].'

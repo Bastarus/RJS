@@ -76,7 +76,6 @@ body {
     grid-template-rows: auto 1fr;
 }
 .header_big {
-    background-image: url('../img/bg/header-bg_mobile.jpg');
     background-position: center;
     background-size: cover;
     min-height: 50vh;
@@ -99,11 +98,13 @@ body {
 }
 
 .logo {
-    max-width: 35%;
+    max-width: 15%;
 }
 .bvi-open {
-    left: 50%;
     max-width: 50px;
+}
+.bvi-open, .bvi-panel-close {
+    left: 50%;
     position: absolute;
     top: 50%;
     transform: translate(-50%, -50%);
@@ -184,13 +185,52 @@ body {
     display: none;
 }
 
+.slider {
+    position: relative;
+}
+.slide {
+    left: 0;
+    opacity: 0;
+    position: absolute;
+    top: 0;
+    transition: opacity 0.3s;
+    z-index: 1;
+}
+.slide:first-child {
+    background: linear-gradient(#000 0deg #000) url('../img/bg/header-bg.jpg');
+}
+.slide_show {
+    opacity: 1;
+    z-index: 2;
+}
+.controls {
+    background: none;
+    border: none;
+    color: #fff;
+    font-size: 2rem;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    z-index: 3;
+}
+#previous {
+    left: 0;
+    transform: translateX(50%);
+}
+#next {
+    right: 0;
+    transform: translateX(-50%);
+}
+
 .header-main {
     background-color: rgba(0, 0, 0, 0.7);
     color: #fff;
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
+    height: 100%;
     padding: 10px 0;
+    width: 100%;
 }
 .header-main__img {
     display: none;
@@ -269,11 +309,6 @@ body {
     margin-bottom: 10px;
 }
 
-.black-block {
-    background-color: #131211;
-    padding: 30px 20px;
-}
-
 .disciplines__cards {
     display: -ms-grid;
     display: grid;
@@ -282,23 +317,32 @@ body {
     grid-template-columns: 1fr;
 }
 .disciplines__card {
+    align-items: flex-end;
     background-position: center;
     background-size: cover;
     border-radius: 20px;
     -webkit-box-shadow: 1px 1px 5px #131211;
             box-shadow: 1px 1px 5px #131211;
+    display: flex;        
     min-height: 225px;
+    -webkit-transition: 0.3s;
+    -o-transition: 0.3s;
+    transition: 0.3s;
     width: 100%;
 }
+.disciplines__card:hover {
+    -webkit-box-shadow: 3px 3px 5px #131211;
+            box-shadow: 3px 3px 5px #131211;
+    -webkit-transform: translateY(-10px);
+        -ms-transform: translateY(-10px);
+            transform: translateY(-10px);
+}
 .disciplines__card>div {
-    align-items: flex-end;
     background-color: rgba(0, 0, 0, 0.4);
-    border-radius: 20px;
+    border-radius: 0 0 20px 20px;
     color: #fff;
-    display: flex;
-    justify-content: center;
-    height: 100%;
     padding: 10px;
+    width: 100%;
 }
 .disciplines__title {
     font-size: 1.7rem;
@@ -307,6 +351,7 @@ body {
 }
 
 .news {
+    align-items: center;
     display: -ms-grid;
     display: grid;
     grid-auto-columns: 1fr;
@@ -323,27 +368,15 @@ body {
     -ms-grid-row: 1;
     -ms-grid-column: 1;
 }
-.news__item {
-    border-radius: 20px;
-    min-height: 200px;
-}
-.news__item, .disciplines__card {
-    -webkit-transition: 0.3s;
-    -o-transition: 0.3s;
-    transition: 0.3s;
-}
-.news__item:hover, .disciplines__card:hover {
-    -webkit-box-shadow: 3px 3px 5px #131211;
-            box-shadow: 3px 3px 5px #131211;
-    -webkit-transform: translateY(-10px);
-        -ms-transform: translateY(-10px);
-            transform: translateY(-10px);
-}
+
 .news__img {
     background-position: center;
     background-size: cover;
     border-radius: 20px 20px 0 0;
     min-height: 200px;
+}
+.withoutImg>.news__img {
+    display: none;
 }
 .news__info {
     background-color: #fff;
@@ -351,6 +384,10 @@ body {
     border-top: none;
     border-radius: 0 0 20px 20px;
     padding: 20px;
+}
+.withoutImg>.news__info {
+    border: 3px solid #202020;
+    border-radius: 20px;
 }
 .news__date {
     align-items: center;
@@ -369,10 +406,6 @@ body {
 }
 .news__text {
     margin-bottom: 10px;
-}
-.newsItem__text {
-    font-size: 1.8rem;
-    line-height: 2rem;
 }
 .news__buttons, .files__buttons {
     -webkit-box-align: center;
@@ -398,7 +431,7 @@ body {
     font-size: 1.2rem;
     margin: 10px 0;
     padding: 10px;
-    overflow-x: scroll;
+    overflow-x: auto;
 }
 .comment-content {
     width: 100%;
@@ -454,8 +487,8 @@ body {
 }
 .form-wrapper {
     margin: 0 auto;
+    max-width: 100%;
     position: relative;
-    width: 100%;
 }
 .form-wrapper_small {
     max-width: 300px;
@@ -479,9 +512,10 @@ body {
     background: none;
     border: none;
     border-bottom: 1px solid #2C3E50;
+    font-size: 0.9rem;
     margin-bottom: 15px;
 }
-.form>.submit {
+.form>.submit, .form>textarea {
     border: 1px solid #2C3E50;
 }
 .form option {
@@ -568,6 +602,7 @@ input, textarea {
         -ms-flex-align: center;
             align-items: center;
     background: #bf0909;
+    color: #fff;
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
@@ -601,6 +636,43 @@ input, textarea {
     -o-transition: 0.3s;
     transition: 0.3s;
     width: 30px;
+}
+
+.forumThemes {
+    border: 3px solid #2C3E50;
+    padding: 10px;
+}
+.forumTheme {
+    align-items: center;
+    border: 1px solid #2C3E50;
+    border-radius: 10px;
+    display: flex;
+    margin: 10px 0;
+    padding: 10px;
+}
+.forumTheme__img {
+    margin-right: 10px;
+    max-width: 40px;
+}
+.forumTheme__answers {
+    margin-left: auto;
+    text-align: center;
+}
+
+.messages {
+    margin: 30px 0;
+}
+.message {
+    border: 1px solid #2C3E50;
+    margin: 10px 0;
+    padding: 10px;
+}
+.messageAuthor {
+    font-weight: bold;
+}
+.messageText {
+    font-size: 1.3rem;
+    margin-top: 5px;
 }
 
 .footer {
@@ -644,7 +716,7 @@ input, textarea {
     }
 
     .logo {
-        max-width: 20%;
+        max-width: 15%;
     }
     .section {
         padding: 30px 50px;
@@ -685,11 +757,10 @@ input, textarea {
 
 @media (min-width: 768px) {
     .header_big {
-        background-image: url('../img/bg/header-bg.jpg');
         min-height: 50vh;
     }
     .logo {
-        max-width: 15%;
+        max-width: 5%;
     }
     .header-top__button {
         display: none;
@@ -870,5 +941,11 @@ input, textarea {
 @media (min-width: 2500px) {
     html {
         font-size: 32px;
+    }
+}
+
+@media all and (-ms-high-contrast: none), (-ms-high-contrast: active) {
+    .bvi-open {
+        width: 50px;
     }
 }

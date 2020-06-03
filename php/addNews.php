@@ -5,15 +5,16 @@
     $text = $_POST["text"];
     $date = date("d.m.y");
     $file = $_FILES['file']['name'];
+    $type = $_FILES['file']['type'];
 
-    $sql = "INSERT INTO `news`(`title`, `text`, `date`, `file`) VALUES ('$title', '$text', '$date', '$file')";
+    $sql = "INSERT INTO `news`(`title`, `text`, `date`, `file`, `type`) VALUES ('$title', '$text', '$date', '$file', '$type')";
 
-    $types = array('image/gif', 'image/png', 'image/jpeg');
+    $types = array('image/gif', 'image/png', 'image/jpeg', '');
     $size = 5242880;
     $uploaddir = '../pages/news-files/';
     $uploadfile = $uploaddir . basename($_FILES['file']['name']);
 
-    if (!in_array($_FILES['file']['type'], $types)) {
+    if (!in_array($type, $types)) {
         die('Запрещённый тип файла. <a href="../pages/news.php">Попробовать другой файл?</a>');
     }
     

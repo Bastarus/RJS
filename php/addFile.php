@@ -8,11 +8,7 @@
     $type = explode('.', $_FILES['file']['name']); 
     $type = end($type);
 
-    if ($_POST['name']) {
-        $name = $_POST['name'] . '.' . $type;
-    } else {
-        $name = $_FILES['file']['name'];
-    }
+    $name = $_FILES['file']['name'];
 
     $id = $_POST['id'];
 

@@ -1,8 +1,5 @@
 <footer class="footer">
     <nav class="footer__menu">
-        <a class="logo" href="/">
-            <img src="/img/icons/Logo.png" alt="Логотип">
-        </a>
         <ul class="footer__list footer__list_left">
             <li class="footer__item footer__item_bold">
                     Меню
@@ -81,7 +78,7 @@
     </nav>
 </footer>
 <script src="/js/main.js"></script>
-<script src="https://code.jquery.com/jquery-1.12.4.min.js"></script>
+<!-- <script src="https://code.jquery.com/jquery-1.12.4.min.js"></script>
 <script src="/js/js.cookie.js"></script>
 <script src="/js/bvi-init.js"></script>
-<script src="/js/bvi.js"></script>
+<script src="/js/bvi.js"></script> -->

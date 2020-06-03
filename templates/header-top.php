@@ -17,10 +17,13 @@
                 <a href="/pages/about.php">Обо мне</a>
             </li>
             <li class="headerMenu__item">
-                <a href="/pages/news.php">Новости</a>
+                <a href="/pages/news.php?page=1">Новости</a>
             </li>
             <li class="headerMenu__item">
                 <a href="/pages/contacts.php">Контакты</a>
+            </li>
+            <li class="headerMenu__item">
+                <a href="/pages/forum.php">Форум</a>
             </li>
             <li class="headerMenu__item user-menu__btn">
                 <?php

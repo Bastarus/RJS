@@ -27,8 +27,6 @@
         <div class="modal-content">
             <div class="form-wrapper" id="form-wrapper">
                 <form enctype="multipart/form-data" name="addFile" method="post" action="../php/addFile.php" class="form">
-                    <label for="name">Имя файла</label>
-                    <input type="text" name="name" id="name">
                     <label for="discipline-select">Дисциплина</label>
                     <select name="discipline-select" id="discipline-select" required>
                         <?php
@@ -51,7 +49,7 @@
                             }
                         ?>
                     </select>
-                    <input type="file" name="file" id="file" required>
+                    <input type="file" name="file" id="file" required multiple>
                     <input type="hidden" name="id" value="<?=$id?>" id="id">
                     <input name="add" type="submit" class="submit" id="add" value="Загрузить">
                 </form>

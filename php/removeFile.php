@@ -14,5 +14,5 @@
         $mysqli->query($sql);
     }
 
-    header("Location: ../index.php#disciplines");
+    header("Location: ".$_SERVER["HTTP_REFERER"]);
 ?>

@@ -7,8 +7,9 @@
     $getFileName = $mysqli->query($sqlFile);
     $result = $getFileName->fetch_assoc();
     $fileName = $result['file'];
-    
-    unlink('../pages/news-files/'. $fileName .'');
+    if($fileName) {
+        unlink('../pages/news-files/'. $fileName .'');
+    }
 
     $sql = "DELETE FROM `news` WHERE `id` = $id";
 

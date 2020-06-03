@@ -13,7 +13,7 @@
         ?>
     </header>
     <main>
-        <section class="section section_contacts section_black" id="firstSection">
+        <section class="section section_contacts">
             <div class="section__main">
                 <div class="section__info contacts">
                     <h1 class="page__title">
@@ -50,29 +50,6 @@
             <div class="map">
                 <script type="text/javascript" charset="utf-8" async src="https://api-maps.yandex.ru/services/constructor/1.0/js/?um=constructor%3A063f2dcfd6da8652b25010ab0607893678e12a4b8dc153ce6616f1595ef38a56&amp;width=100%25&amp;height=400&amp;lang=ru_RU&amp;scroll=true"></script>
             </div>
-            <?php
-                require_once '../php/user/check.php';
-
-                if(count($user) > 0) {
-                    echo '
-                    <div class="submitMessage">
-                        <h2 class="section__title">
-                            Отправить письмо
-                        </h2>
-                        <div class="form-wrapper">
-                            <form action="../php/mail.php" class="form" method="post">
-                                <input type="hidden" name="email" id="email" value="'. $user['email'] .'">
-                                <label for="title">Заголовок письма</label>
-                                <input type="text" name="title" id="title">
-                                <label for="message">Ваше сообщение</label>
-                                <textarea name="message" id="message" cols="30" rows="5" required></textarea>
-                                <input type="submit" class="submit" value="Отправить">
-                            </form>
-                        </div>
-                    </div>
-                    ';
-                }
-            ?>
         </section>
     </main>
     <?php

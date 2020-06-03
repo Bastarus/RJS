@@ -2,26 +2,27 @@
 <html lang="ru">
 <head>
     <?php
-        $servername = "localhost";
-        $database = "rjs";
-        $username = "root";
-        $password = "";
+        require_once '../php/connectDB.php';
 
         $id = $_GET['id'];
-
-        $mysqli = new mysqli($servername, $username, $password, $database);
 
         $result = $mysqli->query("SELECT * FROM `news` WHERE `id` = $id");
         $row = $result->fetch_assoc();
 
         $title = $row['title'];
+        if($row['type'] == "") {
+            $header = "header";
+        } else {
+            $header = "header header_big";
+        }
         require_once '../templates/head.php';
+        
     ?>
+    <link rel="stylesheet" href="../css/news.css">
+    <script src="//cdn.ckeditor.com/4.14.0/full/ckeditor.js"></script>
     <style>
-        .header {
-            background: linear-gradient(0deg, rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url("news-files/<?php echo $row['file'] ?>");
-            background-position: center;
-            background-size: cover;
+        .header_big {
+            background-image: url("news-files/<?php echo $row['file'] ?>");
         }
     </style>
 </head>
@@ -50,19 +51,19 @@
             ';
         }
     ?>   
-    <header class="header header_big">
+    <header class="<?=$header?>">
         <?php
             require_once '../templates/header-top.php';
         ?>
     </header>
     <main>
-        <section class="section section_black" id="firstSection">
+        <section class="section">
             <div class="section__main">
                 <div class="section__info">
                     <h1 class="page__title">
                     <?=$row['title']?>
                     </h1>
-                    <div class="section__text newsItem__text">
+                    <div class="newsItem__text">
                         <p>
                             <?php
                                 echo $row['text'];
@@ -84,9 +85,12 @@
                         ';
                     }
                 ?>
+                <script>
+                    CKEDITOR.replace( 'editText' );
+                </script>
             </div>
         </section>
-        <section class="section section_black">
+        <section class="section">
             <div class="section__main">
                 <div class="section__info">
                     <div class="section__title-block">
@@ -102,9 +106,9 @@
                             <div class="form-wrapper">
                                 <form action="../php/addComment.php" class="form" method="post">
                                     <label for="comment">Текст комментария</label>
-                                    <textarea name="comment" id="comment" cols="30" rows="10"></textarea>
+                                    <textarea name="comment" id="comment" cols="30" rows="10" required></textarea>
                                     <input type="hidden" name="page_id" id="page_id" value="'.$id.'">
-                                    <input type="hidden" name="login" id="login" value="'.$_COOKIE['login'].'">
+                                    <input type="hidden" name="login" id="login" value="'.$user['login'].'">
                                     <input type="hidden" name="avatar" id="avatar" value="'.$user['avatar'].'">
                                     <input type="submit" class="submit" value="Добавить комментарий">
                                 </form>
@@ -134,7 +138,7 @@
                                                 </div>
                                             </div>
                                             <div class="comment-text">
-                                                    '. $comment['text'] .'
+                                                    '. htmlspecialchars_decode($comment['text']) .'
                                             </div>
                                         </div>
                                     </div>
